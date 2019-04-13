@@ -22,6 +22,15 @@ git commit will commit your changes
 and -m is use to to pass any message
 9.to checkout
 -> git checkout 4digit {4digit of hash file }
+10.If you want to make head as your new local master
+->git checkout -B master
+11.Reflog
+-> git reflog 
+it wll give all logs & changes you have done 
+12.To change head postion
+->  git checkout HEAD@{2}
+it will change head {here we have to add "2" whom did we want to change }
+
 it will make head as file which you have checkout
 10.To add in your cloud from local machine
 ->git remote -v
