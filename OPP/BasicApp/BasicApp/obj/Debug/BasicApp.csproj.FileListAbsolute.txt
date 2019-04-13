@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\BasicApp\BasicApp\bin\Debug\BasicApp.exe
+D:\Swabhav rep\OPP\BasicApp\BasicApp\bin\Debug\BasicApp.pdb
+D:\Swabhav rep\OPP\BasicApp\BasicApp\obj\Debug\BasicApp.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\BasicApp\BasicApp\obj\Debug\BasicApp.exe
+D:\Swabhav rep\OPP\BasicApp\BasicApp\obj\Debug\BasicApp.pdb
