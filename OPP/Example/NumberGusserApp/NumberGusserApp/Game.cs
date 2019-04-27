@@ -6,64 +6,64 @@ namespace NumberGusserApp
 {
     class Game
     {
-     
 
 
-            public void run()
+
+        public void run()
+        {
+
+
+            Boolean x = false;
+            int read;
+
+
+
+            Random random = new Random();
+            int randomNumber = random.Next(1, 10);
+
+            read = randomNumber;
+            Console.WriteLine(read);
+            while (x != true)
             {
-               
 
-                Boolean x = false;
-                int read;
-
-
-
-                Random random = new Random();
-                int randomNumber = random.Next(1, 10);
-
-                read = randomNumber;
-                Console.WriteLine(read);
-                while (x != true)
-                {
-
-                    Console.WriteLine("Enter number");
-                    int input = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter number");
+                int input = Convert.ToInt32(Console.ReadLine());
 
                 if ((input > 1) && (input < 10))
+                {
+
+
+                    if (input > read)
                     {
-
-
-                        if (input > read)
-                        {
-                            Console.WriteLine("High");
-                        }
-                        else if (input < read)
-                        {
-                            Console.WriteLine("Low");
-                        }
-                        else if (input == read)
-                        {
-                            Console.WriteLine("Match Found");
-                            x = true;
-                        }
-
+                        Console.WriteLine("High");
                     }
-
-
-                    else
+                    else if (input < read)
                     {
-                        Console.WriteLine("Number not in range");
-
+                        Console.WriteLine("Low");
                     }
-
+                    else if (input == read)
+                    {
+                        Console.WriteLine("Match Found");
+                        x = true;
+                    }
 
                 }
 
+
+                else
+                {
+                    Console.WriteLine("Number not in range");
+
+                }
 
 
             }
 
 
+
         }
+
+
     }
+}
 

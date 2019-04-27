@@ -9,22 +9,26 @@ namespace CodeMagnet6
         static void Main(string[] args)
         {
            
-            ArrayList<String> a = new ArrayList();
-            a.Add(0, "zero");
-            a.Add(1, "one");
-            a.Add(2,"two");
-            Console.WriteLine(a);
+            ArrayList a = new ArrayList();
+            a.Insert(0, "zero");
+            a.Insert(1, "one");
+            a.Insert(2,"two");
+      
             if (a.Contains("two"))
             {
-                a.Add("four");
+                a.Insert(3,"four");
             }
             a.Remove(1);
-            Console.WriteLine(a);
-            if(a.Indexof("four")!=4)
+           
+            if(a.Contains("four"))
             {
-                a.Add(4, "4.2");
+                a.Insert(4, "4.2");
             }
-            Console.WriteLine(a);
+        
+            foreach(string number in a)
+            {
+                Console.WriteLine(number);
+            }
 
         }
     }
