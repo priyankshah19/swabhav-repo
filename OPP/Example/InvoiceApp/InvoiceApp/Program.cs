@@ -29,8 +29,7 @@ namespace InvoiceApp
             Program p = new Program();
            p.PrintDetails(invoice1);
            p.PrintDetails(invoice2);
-            Invoice temp = invoice1;
-            Console.WriteLine(temp.Get(cost))
+           
 
         }
 
