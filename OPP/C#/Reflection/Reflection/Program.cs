@@ -11,65 +11,17 @@ namespace Reflection
             Human priyank = new Human("priyank", 22, 5.3f, 48, Genderoption.MALE);
             Human meet = new Human("meet", 23, 5.6f, 48, Genderoption.MALE);
             int i = 30;
+            Program P = new Program();
+            Human ps = new Human();
             Printinfo(priyank);
             Printinfo(meet);
             priyank.Eat();
             Printinfo(priyank);
-            Type field = typeof(Human);
+            DisplayReflection(P);
 
-            FieldInfo[] fieldInfo = field.GetFields();
+           
 
-            Console.WriteLine("The list of fields of the Human class are:--");
-
-            foreach (FieldInfo fInfo in fieldInfo)
-
-            {
-
-                Console.WriteLine(fInfo.FieldType);
-
-            }
-
-            Type type = typeof(Human);
-
-            PropertyInfo[] propertyInfo = type.GetProperties();
-
-            Console.WriteLine("The list of properties of the Human class are:--");
-
-            foreach (PropertyInfo pInfo in propertyInfo)
-
-            {
-
-                Console.WriteLine(pInfo.Name);
-
-            }
-
-            Type constructor = typeof(Human);
-
-            ConstructorInfo[] constructorInfo = constructor.GetConstructors();
-
-            Console.WriteLine("The Customer class contains the following Constructors:--");
-
-            foreach (ConstructorInfo c in constructorInfo)
-
-            {
-
-                Console.WriteLine(c);
-
-            }
-
-            Type method = typeof(Human);
-
-            MethodInfo[] methodInfo = method.GetMethods();
-
-            Console.WriteLine("The Customer class contains the following Methods:--");
-
-            foreach (MethodInfo c in methodInfo)
-
-            {
-
-                Console.WriteLine(c);
-
-            }
+           
 
         }
         private static void Printinfo(Human human)
@@ -81,6 +33,57 @@ namespace Reflection
             Console.WriteLine("Gender: {0}", human.Gender);
             Console.ReadLine();
         }
+
+        private static void DisplayReflection(Program P)
+        {
+            
+            Type type = typeof(Program);
+           
+            PropertyInfo[] propertyInfo = type.GetProperties();
+
+            Console.WriteLine("The list of properties of the class are:--");
+
+            foreach (PropertyInfo pInfo in propertyInfo)
+
+            {
+
+                Console.WriteLine(pInfo.Name);
+
+            }
+
+            Type method = typeof(Program);
+
+            MethodInfo[] methodInfo = method.GetMethods();
+
+            Console.WriteLine("The class contains the following Methods:--");
+
+            foreach (MethodInfo c in methodInfo)
+
+            {
+
+                Console.WriteLine(c);
+
+            }
+
+
+            Type constructor = typeof(Program);
+
+            ConstructorInfo[] constructorInfo = constructor.GetConstructors();
+
+            Console.WriteLine("The class contains the following Constructors:--");
+
+            foreach (ConstructorInfo c in constructorInfo)
+
+            {
+
+                Console.WriteLine(c);
+
+            }
+        }
+
+
+        
+
 
     }
 }

@@ -9,7 +9,10 @@ namespace Reflection
         private float _height;
         private float _weight;
         private Genderoption _gender;
+        public Human()
+        {
 
+        }
         public Human(string name, int age, float height, float weight, Genderoption gender)
         {
             _name = name;
