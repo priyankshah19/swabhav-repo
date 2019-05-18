@@ -58,14 +58,18 @@ namespace OverridingApp
         public string Name { get { return _name; } }
         public double Balance { get { return _balance; } }
 
-        public override string ToString()        //here we have override tostring method to get output
+
+        public override string ToString()    //here we have override tostring method to get output
         {
-            return "Account: " + _accountnumber + " " + _name  +" " +_balance;
+           
+            return (base.ToString() +" " + "Account: " + _accountnumber + " " + _name + " " + _balance ) ; 
         }
+            
+
 
         public override bool Equals(object customer2)
         {
-            return true;
+            return true; 
         }
     }
 }

@@ -8,8 +8,9 @@ namespace GuitarTestingApp
     {
         static void Main(string[] args)
         {
-            Inventory iventory = new Inventory();
+            Inventory inventory = new Inventory();
             initializeInventory(inventory);
+            ArrayList matchinguitar = inventory.search(Guitar);
             Guitar priyank = new GuitarTestingApp.Guitar("serial01", 1000, "wood","Electric", "y1", "Black", "top");
             if (priyank != null)
             {
@@ -27,14 +28,6 @@ namespace GuitarTestingApp
 
         }
 
-        public Guitar search(Guitar searchGuitar)
-        {
-            for(Iterator i=Guitar.iterator();i.hasNext();)
-            {
-                Guitar guitar = (Guitar)i.Next();
-                if(search.GetBuilder()!)
-            }
-
-        }
+        
     }
 }

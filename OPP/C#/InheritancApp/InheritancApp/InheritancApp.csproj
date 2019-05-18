@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{594B5C03-13F2-48F7-BF07-B4052B59FA86}</ProjectGuid>
+    <ProjectGuid>{27BE4179-C8F4-4853-937F-5BFAA11151A3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GuitarTestingApp</RootNamespace>
-    <AssemblyName>GuitarTestingApp</AssemblyName>
+    <RootNamespace>InheritancApp</RootNamespace>
+    <AssemblyName>InheritancApp</AssemblyName>
     <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -37,11 +37,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EnumHelper.cs" />
-    <Compile Include="Guitar.cs" />
-    <Compile Include="Inventory.cs" />
+    <Compile Include="Boy.cs" />
+    <Compile Include="Infant.cs" />
+    <Compile Include="Kid.cs" />
+    <Compile Include="Man.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

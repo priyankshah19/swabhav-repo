@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Threading.Tasks;
 using System.Reflection;
 using System.Text;
 
 
-namespace CustomAttribute
+namespace CustomAttribute.
 {
     class Program
     {
         static void Main(string[] args)
         {
             Foo foo = new Foo();
-            // Type type = foo.GetType();
+          //  Type type = foo.GetType();
             Type field = typeof(Foo);
             FieldInfo[] fieldInfo = field.GetFields();
             Console.WriteLine("Fields of project:");
@@ -59,4 +59,3 @@ namespace CustomAttribute
         }
     }
 }
-
