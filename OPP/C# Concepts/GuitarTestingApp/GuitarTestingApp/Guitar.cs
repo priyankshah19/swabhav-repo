@@ -6,19 +6,24 @@ namespace GuitarTestingApp
 {
     class Guitar
     {
-        private string _serialnumber, _builder, _type, _model, _blackwood, _topwood;
+        private string _serialnumber, _builder, _type, _model, _backwood, _topwood;
         private double _price;
 
-        public Guitar(string serialnumber,double price,string builder,string type,string model,string blackwood,string topwood)
+        public Guitar(String serialnumber, double price, Builder builder, string model, Type type, Wood backwood, Wood topwood)
         {
             _serialnumber = serialnumber;
             _price = price;
-            _builder = builder;
-            _type = type;
+            _builder = builder.ToString();
+            _type = type.ToString();
             _model = model;
-            _blackwood = blackwood;
-            _topwood = topwood;
+            _backwood = backwood.ToString();
+            _topwood = topwood.ToString();
         }
+        public string GetSerialNumber()
+        {
+            return _serialnumber;
+        }
+
         public void SetPrice(double newprice)
         {
             _price = newprice;
@@ -44,28 +49,16 @@ namespace GuitarTestingApp
             return _model;
         }
 
-        public string GetBlackwood()
+        public string GetBackwood()
         {
-            return _blackwood;
+            return _backwood;
         }
         public string GetTopwood()
         {
             return _topwood;
 
         }
-        public enum Type
-        {
-            ACCOUSTIC,ELECTRIC
-                
-                
-       
-        }
-        public enum WOOD
-        {
-            BLACK,TOP
-
-
-        }
+        
         
 
 

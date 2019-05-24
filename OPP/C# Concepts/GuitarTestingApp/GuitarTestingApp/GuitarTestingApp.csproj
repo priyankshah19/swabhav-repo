@@ -37,7 +37,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EnumHelper.cs" />
     <Compile Include="Guitar.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="Program.cs" />

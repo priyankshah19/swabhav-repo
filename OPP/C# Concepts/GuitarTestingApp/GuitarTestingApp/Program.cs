@@ -8,26 +8,59 @@ namespace GuitarTestingApp
     {
         static void Main(string[] args)
         {
-            Inventory inventory = new Inventory();
-            initializeInventory(inventory);
-            ArrayList matchinguitar = inventory.search(Guitar);
-            Guitar priyank = new GuitarTestingApp.Guitar("serial01", 1000, "wood","Electric", "y1", "Black", "top");
-            if (priyank != null)
             {
-                Console.WriteLine("You might like :{0} {1} {2} {3} {4} {5} ", priyank.GetBuilder(), priyank.GetBlackwood(), priyank.GetModel(), priyank.GetPrice(), priyank.GetTopwood(), priyank.Gettype());
-            }
-            else
-            {
-                Console.WriteLine("no match found ");
-            }
+                Inventory inventory = new Inventory();
+                initializeInvetory(inventory);
+                Guitar whatErinLikes = new Guitar("", 0, Builder.FENDER, "Stratocastor", Type.ELECTRIC, Wood.ALDER, Wood.CEDAR);
+                List<Guitar> guitars = inventory.search(whatErinLikes);
+                if (guitars != null)
+                {
 
-
+                    foreach (Guitar guitar in guitars)  // we can use foreach instead of IEnumerator to loop thorugh the collection
+                    {
+                        Console.WriteLine("Erin, you might like this " +
+                        guitar.GetBuilder() + " " + guitar.GetModel() + " " +
+                        guitar.GetType() + " guitar : \n    " +
+                        guitar.GetBackwood() + " back and sides, \n    " +
+                        guitar.GetTopwood() + " top. \nYou can have it only for $" +
+                        guitar.GetPrice() + " ! ");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Sorry, Erin, we have nothing for you.");
+                }
+            }
         }
-        private static void initializeInventory(Inventory inventory)
+        private static void initializeInvetory(Inventory inventory)
         {
+            inventory.AddGuitar("1", 3000, Builder.FENDER, "Stratocastor", Type.ELECTRIC, Wood.ALDER, Wood.CEDAR);
+            inventory.AddGuitar("2", 3500, Builder.FENDER, "Stratocastor", Type.ELECTRIC, Wood.ALDER, Wood.CEDAR);
+            inventory.AddGuitar("3", 4000, Builder.OLSON, "Stratocastor", Type.ACOUSTIC, Wood.ALDER, Wood.ALDER);
+
 
         }
 
-        
+
+
+
+
+
     }
+
+    public enum Type
+    {
+        ACOUSTIC, ELECTRIC
+    }
+
+    public enum Builder
+    {
+        FENDER, MARTIN, GIBSON, COLLINGS, OLSON, RYAN, PRS, ANY
+    }
+    public enum Wood
+    {
+        INDIAN_ROSEWOOD, BRAZILIAN_ROSEWOOD, MAHOGANY, MAPLE,
+        COCOBOLO, CEDAR, ADIRONDACK, ALDER, SITKA
+    }
+
 }

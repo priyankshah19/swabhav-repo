@@ -10,15 +10,28 @@ namespace AccountApp
         {
             Account priyank = new Account(1001, "priyank");
             Account meet = new Account(1002, "meet", 1000.0);
+            InsufficientException excep = new InsufficientException(meet);
 
-            Printinfo(priyank);
+            //  Printinfo(priyank);
             Printinfo(meet);
-         //   priyank.Deposit(700);
-          // priyank.WithDraw(300);
+            //   priyank.Deposit(700);
+            // priyank.WithDraw(300);
             meet.Deposit(300);
-           meet.WithDraw(100);
+            try
+            {
+
+                meet.WithDraw(1000);
+            }
+
+            catch (InsufficientException e)
+            {
+
+                Console.WriteLine("Exception: {0}", e.Message);
+                Console.WriteLine("Your Current Balance is {0} ", e.Account1.Balance);
+            }
+
             //Printinfo(priyank);
-            Printinfo(meet);
+            // Printinfo(meet);
 
         }
         private static void Printinfo(Account account)

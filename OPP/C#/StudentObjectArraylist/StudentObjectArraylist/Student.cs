@@ -19,6 +19,7 @@ namespace StudentObjectArraylist
             return
                 String.Format("{0} {1} {2}", _name,_age,_college);
         }
+        public string Name { get { return _name; } }
 
    
     }

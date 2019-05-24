@@ -18,6 +18,8 @@ namespace StudentObjectArraylist
             student.Add(student2);
             Student student3 = new Student("XYZ", "18", "Mithibai");
             student.Insert(2, student3);
+         
+            Console.WriteLine("{0}",student1.Name);
 
             foreach (var students in student)
             {
@@ -32,9 +34,9 @@ namespace StudentObjectArraylist
             SerializableData(student);
 
             ArrayList studentxx = BinaryDeserialize();
-                foreach(var stud1 in studentxx)
+                foreach(Student stud1 in studentxx)
             {
-                Console.WriteLine(stud1);
+                Console.WriteLine(stud1.Name);
             }
 
         }
