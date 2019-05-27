@@ -10,10 +10,13 @@ namespace Phonebook
 {
     class Program
     {
-        public static List<Contacts> Contactlist = new List<Contacts>();
+        
+
+         public static List<Contacts> Contactlist = new List<Contacts>();
         static void Main(string[] args)
         {
-
+           // ManagingService manager = new ManagingService();
+           
             List<Contacts> Contactlist1 = null;
             using (FileStream str = File.OpenRead(@"D:\Swabhav rep\OPP\C#\Phonebook\contactlists.txt"))
             {
@@ -65,7 +68,7 @@ namespace Phonebook
             }
 
         }
-        private static void Add()
+       private static void Add()
         {
             Contacts singlecontacts = new Contacts();
             Console.WriteLine("Add First Name");
@@ -84,7 +87,7 @@ namespace Phonebook
             formatter.Serialize(stream, Contactlist);
             stream.Close();
 
-        }
+        } 
         private static void Printinfo(Contacts Printcontact)
         {
             Console.WriteLine("Firstname:{0}", Printcontact.FirstName);
