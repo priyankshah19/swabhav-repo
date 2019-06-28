@@ -1,0 +1,6 @@
+D:\Swabhav rep\OPP\C#\Solid Principle\LSVSolution\LSVSolution\bin\Debug\LSVSolution.exe.config
+D:\Swabhav rep\OPP\C#\Solid Principle\LSVSolution\LSVSolution\bin\Debug\LSVSolution.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\LSVSolution\LSVSolution\bin\Debug\LSVSolution.pdb
+D:\Swabhav rep\OPP\C#\Solid Principle\LSVSolution\LSVSolution\obj\Debug\LSVSolution.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\Solid Principle\LSVSolution\LSVSolution\obj\Debug\LSVSolution.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\LSVSolution\LSVSolution\obj\Debug\LSVSolution.pdb

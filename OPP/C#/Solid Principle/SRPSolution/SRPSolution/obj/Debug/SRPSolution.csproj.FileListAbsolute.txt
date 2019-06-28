@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\Solid Principle\SRPSolution\SRPSolution\bin\Debug\SRPSolution.exe.config
+D:\Swabhav rep\OPP\C#\Solid Principle\SRPSolution\SRPSolution\bin\Debug\SRPSolution.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\SRPSolution\SRPSolution\bin\Debug\SRPSolution.pdb
+D:\Swabhav rep\OPP\C#\Solid Principle\SRPSolution\SRPSolution\obj\Debug\SRPSolution.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\SRPSolution\SRPSolution\obj\Debug\SRPSolution.pdb

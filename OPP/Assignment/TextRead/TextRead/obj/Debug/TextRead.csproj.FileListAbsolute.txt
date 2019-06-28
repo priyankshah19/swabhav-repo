@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\Assignment\TextRead\TextRead\bin\Debug\TextRead.exe
+D:\Swabhav rep\OPP\Assignment\TextRead\TextRead\bin\Debug\TextRead.pdb
+D:\Swabhav rep\OPP\Assignment\TextRead\TextRead\obj\Debug\TextRead.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\Assignment\TextRead\TextRead\obj\Debug\TextRead.exe
+D:\Swabhav rep\OPP\Assignment\TextRead\TextRead\obj\Debug\TextRead.pdb

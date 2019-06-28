@@ -9,7 +9,7 @@ namespace Calculator
         
         static void Main(string[] args)
         {
-            Calculators cal = new Calculators();
+            Calculator cal = new Calculator();
             try
             {
                long result = cal.Add(-9, 10);

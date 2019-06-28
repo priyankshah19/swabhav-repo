@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<h1>Question Bank</h1>
+
+<body>
+    <div id="div">
+        <input type="button" id="button" value='Start'>
+
+        <br>
+    </div>
+    <div id='div2'>
+        <input type="button" id="next" value='Next'>
+        <input type="button" id="back" value='Back'>
+        <p id='pid'></p>
+    </div>
+</body>
+<script src="jquery-3.3.1.js"></script>
+<script>
+    var rightcount=0;
+    var questioncount=0;
+    var selection;
+    var selectionid;
+    var inputno;
+    const myQuestions = [
+        {
+            id: 1,
+            question: "Who is the strongest?",
+            answers: {
+                a: "Superman",
+                b: "The Terminator",
+                c: "Waluigi, obviously"
+            },
+            correctAnswer: "a"
+        },
+        {
+            id: 2,
+            question: "What is the best site ever created?",
+            answers: {
+                a: "SitePoint",
+                b: "Simple Steps Code",
+                c: "Trick question; they're both the best"
+            },
+            correctAnswer: "c"
+        },
+        {
+            id: 3,
+            question: "Where is Waldo really?",
+            answers: {
+                a: "Antarctica",
+                b: "Exploring the Pacific Ocean",
+                c: "Sitting in a tree",
+                d: "Minding his own business, so stop asking"
+            },
+            correctAnswer: "d"
+        }
+    ];
+    console.log(myQuestions);
+    $(document).ready(function () {
+
+        $('#div').css(
+            {
+                "border-color": "#C1E0FF",
+                "border-weight": "1px",
+                "font-weight": "bold",
+                "border-style": "solid",
+                "width": "1000px",
+                "height": "300px"
+            }
+        );
+        $('#div2').css(
+                {
+                    'display': 'none',
+                    'float': 'left'
+                })
+        $('#button').click(function () {
+            var array = [];
+            count = 0;
+            // array.push(myQuestions[0]);
+            // console.log(array);
+            var str = 'xyz';
+            console.log(myQuestions[0].answers);
+            $('#div2').css(
+                {
+                    'display': 'block',
+                    'float': 'left'
+                })
+            Questionpicker();
+
+
+        });
+        function Questionpicker() {
+            array = myQuestions[count].answers;
+            $('#div').text(myQuestions[count].question);
+            $('#div').append('<br>');
+            
+            
+
+
+
+            $.each(array, function (index, value) {
+                 inputno = document.createElement("input");
+            inputno.type = "radio";
+            inputno.id = index;
+            inputno.name="option";
+            inputno.value =array[index];
+            inputno.textContent=index;
+            inputno.onclick =clickhandler          
+                $("#div").append(inputno);
+                $('#div').append(value + '<br>');
+            }); 
+           
+
+        }
+        function clickhandler()
+        {
+           
+    
+        }
+
+
+        $('#next').click(function () {
+           
+           selection=document.querySelector('input[name="option"]:checked');
+           selection=selection ? selection.value : ''; 
+           selectionid=document.querySelector('input[name="option"]:checked');
+           selectionid=selectionid ? selectionid.id : ''; 
+        //   alert(selectionid)
+            if((selection=="Superman")||(selection=="Trick question; they're both the best")||(selection=="Minding his own business, so stop asking"))
+            {
+              rightcount++;
+            }
+            count++;
+            if(count<3)
+            {
+                Questionpicker();
+            }
+           else
+           {
+               $('#div2').html("Your Score:")
+               $('#div2').append(rightcount);
+           }
+        }
+        );
+        $('#back').click(function() {
+          
+           $("input[name=option][id=" + selectionid + "]").prop('checked', true);
+         //  $('input:radio[name="option"][value="selection"]').attr('checked',true);
+           alert(selectionid);
+            count--;
+            Questionpicker();
+            $('#selectionid').attr('checked', true);
+        })
+
+    });
+
+</script>
+
+</html>

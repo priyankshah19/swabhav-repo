@@ -1,0 +1,8 @@
+D:\Swabhav rep\OPP\C#\WindowsFormsSync\WindowsFormsSync\bin\Debug\WindowsFormsSync.exe.config
+D:\Swabhav rep\OPP\C#\WindowsFormsSync\WindowsFormsSync\bin\Debug\WindowsFormsSync.exe
+D:\Swabhav rep\OPP\C#\WindowsFormsSync\WindowsFormsSync\bin\Debug\WindowsFormsSync.pdb
+D:\Swabhav rep\OPP\C#\WindowsFormsSync\WindowsFormsSync\obj\Debug\WindowsFormsSync.Form1.resources
+D:\Swabhav rep\OPP\C#\WindowsFormsSync\WindowsFormsSync\obj\Debug\WindowsFormsSync.Properties.Resources.resources
+D:\Swabhav rep\OPP\C#\WindowsFormsSync\WindowsFormsSync\obj\Debug\WindowsFormsSync.csproj.GenerateResource.Cache
+D:\Swabhav rep\OPP\C#\WindowsFormsSync\WindowsFormsSync\obj\Debug\WindowsFormsSync.exe
+D:\Swabhav rep\OPP\C#\WindowsFormsSync\WindowsFormsSync\obj\Debug\WindowsFormsSync.pdb

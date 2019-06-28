@@ -1,0 +1,8 @@
+D:\Swabhav rep\OPP\C#\Design Pattern\SimpleFactorySolution\FactoryLibClient1\bin\Debug\FactoryLibClient1.exe.config
+D:\Swabhav rep\OPP\C#\Design Pattern\SimpleFactorySolution\FactoryLibClient1\bin\Debug\FactoryLibClient1.exe
+D:\Swabhav rep\OPP\C#\Design Pattern\SimpleFactorySolution\FactoryLibClient1\bin\Debug\FactoryLibClient1.pdb
+D:\Swabhav rep\OPP\C#\Design Pattern\SimpleFactorySolution\FactoryLibClient1\bin\Debug\SimpleFactorylib.dll
+D:\Swabhav rep\OPP\C#\Design Pattern\SimpleFactorySolution\FactoryLibClient1\bin\Debug\SimpleFactorylib.pdb
+D:\Swabhav rep\OPP\C#\Design Pattern\SimpleFactorySolution\FactoryLibClient1\obj\Debug\FactoryLibClient1.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\Design Pattern\SimpleFactorySolution\FactoryLibClient1\obj\Debug\FactoryLibClient1.exe
+D:\Swabhav rep\OPP\C#\Design Pattern\SimpleFactorySolution\FactoryLibClient1\obj\Debug\FactoryLibClient1.pdb

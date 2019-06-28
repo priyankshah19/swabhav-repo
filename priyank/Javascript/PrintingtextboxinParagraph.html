@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2> Enter Data </h2>
+ChangeForegroundcolor:<select id="dynamicbutton" ></select>
+ChangeBackgroundcolor<select id="dynamicbackgroundcolor"></select>
+<input id="fontsizeinput" type="text" onInput="changefontsize(event)">
+<input id="textboxinput" type="text" onInput="showCurrentValue(event)"> 
+<p id="output"></p>
+<script>
+var color = [   
+                                {
+
+                                    colorname:"Red",
+
+                                    colorvalue:"#ff8080"
+
+ 
+
+                                },
+
+                                {
+
+                                    colorname: "Orange" ,
+
+                                    colorvalue:"#ff944d"
+
+ 
+
+                                },
+
+                                {
+
+                                    colorname:"Green"  ,
+
+                                    colorvalue:"#66ff66"
+
+ 
+
+                                }
+
+                                 ]
+
+ 
+
+        var colorpick = document.getElementById("dynamicbutton")
+		selectoption(colorpick);
+		var colorpick1 = document.getElementById("dynamicbackgroundcolor")
+		selectoption(colorpick1);
+		function selectoption(select)
+		{
+         for (var i = 0; i < color.length; i++) {
+
+            var option = document.createElement('option')
+
+            option.text = color[i].colorname;
+
+            option.value = color[i].colorvalue;
+
+            select.appendChild(option);
+			
+			
+
+        }
+		}
+		
+
+     document.getElementById('dynamicbutton').addEventListener('change', function () {
+         var pid=document.getElementById("output");
+		 var font=pid.value;
+         pid.style.backgroundColor = this.value;
+	      
+
+        });   
+		 document.getElementById('dynamicbackgroundcolor').addEventListener('change', function () {
+ 
+        document.body.style.backgroundColor =this.value;
+	      
+
+        }); 
+function changefontsize(event)
+{
+var font=event.target.value;
+var pid=document.getElementById("output");
+ pid.style.fontSize=font+"px";
+ 
+}
+function showCurrentValue(event)
+{
+    var textboxvalue = event.target.value;
+	var pid=document.getElementById("output");
+	//pid.style.fontSize="25px";
+    pid.innerText= textboxvalue;  
+	 
+}
+
+</script>
+</body>
+</html>

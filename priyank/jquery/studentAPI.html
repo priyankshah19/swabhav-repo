@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html>
+        <link rel="stylesheet" href="bootstrap-3.4.1-dist\bootstrap-3.4.1-dist\css\bootstrap.css">
+<body class="container-fluid">
+    <div class="border border-dark" style="background-color:yellow; width:350px; padding-top:20px;border-style: groove;" >
+    <form id="formid" class="bg-dark text-white">
+            <i class="glyphicon glyphicon-pencil"></i>
+            <label for="rollno">Roll no</label>
+            <input type="text" id="rollno">
+            <br>
+        <br>
+        <i class="glyphicon glyphicon-user"></i> 
+        <label for="fname">First Name</label>
+        <input  type="text" id="fname" >
+        <br>
+        <br>
+        <i class="glyphicon glyphicon-heart"></i>
+        <label for="age">Age</label>
+        <input type="text" id="age">
+        <br>
+        <br>
+        <i class="glyphicon glyphicon-envelope"></i>
+        <label for="email">Email</label>
+        <input type="text" id="email">
+        <br>
+        <br>
+        <i class="glyphicon glyphicon-calendar"></i>
+        <label for="date">Date</label>
+        <input type="date" id="date">
+        <br>
+        <br>
+        <i class="glyphicon glyphicon-user"></i>
+        <label for="Ismale">Gender</label>
+        <select id="Ismale">
+            <option selected disabled>--select any value--</option>
+            <option value="true">Male</option>
+            <option value="false">Female</option>
+        </select>
+        <br>
+        <br>
+    </form>
+    <input type="button" id="addbutton" value="Add" class="btn btn-primary visible-lg">
+    <br>
+
+    <input type="button" id="updatebutton" value="Update" class="btn btn-primary visible-lg" >
+</div>
+    
+    <div id="text">
+        <h1>Ajax Demo</h1>
+        <p id=paragraphid> </p>
+        <img src="spinner.jpg" height="20" id="image" />
+        <button type="button" id="search" class="btn btn-light">
+                Search Records <span class="glyphicon glyphicon-search"></span></button>
+        
+      
+
+    </div>
+
+    <div id='div'>
+
+        <p id=pid></p>
+    </div>
+    <div>
+        <table class="table table-bordered"   id="table"  >
+            <thead >
+                <tr>
+                    <!--we have to create element of table row-->
+                    <th>Id</th>
+                    <th>Rollno</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Date</th>
+                    <th>Ismale</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</body>
+<script src="jquery-3.3.1.js"></script>
+<script>
+    var delay = 5000;
+    var result;
+    var count = 0;
+    var id;
+    $(document).ready(DocumentHandler);
+
+    function DocumentHandler() {
+        updatebutton.setAttribute("disabled", true);
+        //$('updatebutton').disabled=true;
+        $("#image").hide();
+        $(document).ajaxStart(function () {
+            $("#image").show();
+        }).ajaxStop(function () {
+            $("#image").hide();
+        });
+
+        $('#addbutton').click(AddHandler);
+        function AddHandler() {
+
+            $('#table').find("tr:gt(0)").remove();
+            Takinginput();
+           
+        }
+
+        $('#search').click(Display);
+        function Takinginput() {
+            var name = $('#fname').val();
+            var rollno = $('#rollno').val();
+            var age = $('#age').val();
+            var email = $('#email').val();
+            var date = $('#date').val();
+            var ismale = $('#Ismale').val();
+
+            if ((name == '') || (rollno == '') || (ismale == '') || (age == '') || (email == '') || (date == '')) {
+                alert("please fill all the details");
+            }
+            else {
+                $('#fname').val('');
+            $('#rollno').val('');
+            $('#age').val('');
+            $('#email').val('');
+            $('#date').val('');
+            $('#Ismale').val('');
+                AddingDataToUrl(name, rollno, age, email, date, ismale);
+                count++;
+                $('#paragraphid').html('Total student: ' + count); ///alert(count);
+            }
+
+        }
+        function AddingDataToUrl(name, rollno, age, email, date, ismale) {
+            $.post("http://gsmktg.azurewebsites.net:80/api/v1/techlabs/test/students",
+                {
+                    rollNo: rollno,
+                    name: name,
+                    age: age,
+                    email: email,
+                    date: date,
+                    isMale: ismale
+                },
+                function (data, status) {
+                    Display();
+                    alert("name:" + name + "Data Adding Status " + status);
+                });
+        }
+
+        function Display() {
+            $.ajax({
+                url: "http://gsmktg.azurewebsites.net:80/api/v1/techlabs/test/students", type: "Get", dataType: "json", success: function (result) {
+                    //  $('#div').html(JSON.stringify(result));
+                    ShowingTable(result);
+                }
+            })
+        }
+        function ShowingTable(result) {
+            var output = JSON.stringify(result);
+            var store = JSON.parse(output);
+            count = store.length;
+            $('#paragraphid').html('Total student: ' + count);               // alert(count);
+
+            $("#table").find("tr:gt(0)").remove();
+            for (var i = 0; i < store.length; i++) {
+                var new_row = " ";
+                new_row += "<td>" + store[i].id + "</td><td>" + store[i].rollNo + "</td><td>" + store[i].name + "</td><td>" + store[i].age + "</td><td>" + store[i].email + "</td><td>" + store[i].date + "</td><td>" + store[i].isMale + "</td><td><input type=\"button\" value=\"Delete\" id=\"Delete" + i + "\" class=\" glyphicon glyphicon-remove btn btn-danger visible-lg\"></td><td>" + "</td><td><input type=\"button\" value=\"Edit\" id=\"Edit" + i + "\"class=\"btn btn-info visible-lg\"></td><td>"+"</td>";
+                store[i].id
+                var tr = document.createElement('tr');
+                tr.innerHTML = new_row;
+                $('#table').append(tr);
+
+            }
+
+        }
+        $("body").on("click", "input[value=Delete]", DeleteHandler);
+        $("body").on("click", "input[value=Edit]", EditHandler);
+        function DeleteHandler() {
+
+            var option = confirm("Press ok to continue");
+            if (option == true) {
+                var row = $(this).parents("tr");
+                console.log(row)
+                var item = row.find("td").first().text();
+                console.log(item)
+
+                $.ajax({
+                    url: "http://gsmktg.azurewebsites.net:80/api/v1/techlabs/test/students/" + item,
+                    type: "DELETE",
+                    contentType: 'application/json',
+                    success: function (data) {
+
+                        Display();
+                        count--;
+                        $('#paragraphid').html('Total student: ' + count);
+                    },
+                    error: function (status) {
+                        alert("data deleted already" + status);
+                    }
+                })
+
+            }
+            else {
+                alert("you have pressed cancel");
+            }
+
+        }
+        function EditHandler() {
+            var row = $(this).parents("tr");
+            console.log(row)
+            id = row.find("td:eq(0)").text();
+            console.log(id);
+            var rollno = row.find("td:eq(1)").text();
+            var name = row.find("td:eq(2)").text();
+            var age = row.find("td:eq(3)").text();
+            var email = row.find("td:eq(4)").text();
+            var date = row.find("td:eq(5)").text();
+            var ismale = row.find("td:eq(6)").text();
+            row.find("td:eq(10)").html('<input type=\"button\" value=\"CancelButton\" id=\"Cancel"\" class=\"btn btn-danger visible-lg\">');
+            $('#fname').val(name);
+            $('#rollno').val(rollno);
+            $('#age').val(age);
+            $('#email').val(email);
+            $('#date').val(date);
+            $('#Ismale').val(ismale);
+            addbutton.setAttribute("disabled", true);
+            document.getElementById('updatebutton').disabled = false;
+
+        }
+        $("body").on("click", "input[value=CancelButton]", CancelHandler);
+      //  $('#cancelbuttonid').click(CancelHandler);
+        function CancelHandler()
+        {
+            alert('hi');
+            $('#fname').val('');
+            $('#rollno').val('');
+            $('#age').val('');
+            $('#email').val('');
+            $('#date').val('');
+            $('#Ismale').val('');
+            updatebutton.setAttribute("disabled", true);
+            document.getElementById('addbutton').disabled = false;
+            $('#Cancel').hide();
+        }
+        $('#updatebutton').click(UpdateHandler);
+        function UpdateHandler() {
+            alert(id);
+            $.ajax({
+                url: "http://gsmktg.azurewebsites.net:80/api/v1/techlabs/test/students/" + id,
+                method: 'PUT',
+                data: {
+                    rollNo: $("#rollno").val(),
+                    name: $('#fname').val(),
+                    age: $('#age').val(),
+                    email: $('#email').val(),
+                    date: $('#date').val(),
+                    isMale: $('#Ismale').val()
+                },
+                success: function (data) {
+                    addbutton.removeAttribute("disabled");
+                    updatebutton.setAttribute("disabled", true);
+                    alert('success');
+                    Display();
+                    $('#paragraphid').html('Total student: ' + count);
+                },
+                error: function (status) {
+                    alert("error in editing" + status);
+                }
+                   
+            })
+
+        }
+
+    }
+</script>
+
+</html>

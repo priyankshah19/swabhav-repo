@@ -1,0 +1,8 @@
+D:\Swabhav rep\OPP\C#\Calculator\CalculatorTest\bin\Debug\CalculatorTest.dll
+D:\Swabhav rep\OPP\C#\Calculator\CalculatorTest\bin\Debug\CalculatorTest.pdb
+D:\Swabhav rep\OPP\C#\Calculator\CalculatorTest\bin\Debug\Calculator.exe
+D:\Swabhav rep\OPP\C#\Calculator\CalculatorTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Swabhav rep\OPP\C#\Calculator\CalculatorTest\bin\Debug\Calculator.pdb
+D:\Swabhav rep\OPP\C#\Calculator\CalculatorTest\obj\Debug\CalculatorTest.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\Calculator\CalculatorTest\obj\Debug\CalculatorTest.dll
+D:\Swabhav rep\OPP\C#\Calculator\CalculatorTest\obj\Debug\CalculatorTest.pdb

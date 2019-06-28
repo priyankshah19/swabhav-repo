@@ -1,0 +1,6 @@
+D:\Swabhav rep\OPP\C#\EventDelegateApp\Subscriber\bin\Debug\Subscriber.exe.config
+D:\Swabhav rep\OPP\C#\EventDelegateApp\Subscriber\obj\Debug\Subscriber.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\EventDelegateApp\Subscriber\bin\Debug\Subscriber.exe
+D:\Swabhav rep\OPP\C#\EventDelegateApp\Subscriber\bin\Debug\Subscriber.pdb
+D:\Swabhav rep\OPP\C#\EventDelegateApp\Subscriber\obj\Debug\Subscriber.exe
+D:\Swabhav rep\OPP\C#\EventDelegateApp\Subscriber\obj\Debug\Subscriber.pdb

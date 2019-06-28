@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<body ng-app="event-app">
+    <div ng-controller='controller'>
+        <button ng-click="myFunc()">Load</button>
+        <p>
+        
+            <ul>
+                    <li ng-repeat="students in students">Id: {{students.id}} Name:{{students.name}} cgpa:{{students.cgpa}} 
+                          Image:  <img ng-src="{{students.image}}" height='100px'>
+                    </li>
+                  </ul>
+            
+        </p>
+        
+            
+      
+
+    </div>
+
+</body>
+<script src="angular.js"> </script>
+<script src="collection.js">
+    /// <reference path="jquery-1.8.2.js" />
+
+ 
+
+</script>
+
+</html>

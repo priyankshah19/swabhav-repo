@@ -1,0 +1,6 @@
+D:\Swabhav rep\OPP\C#\Solid Principle\SRPViolation\SRPViolation\bin\Debug\SRPViolation.exe.config
+D:\Swabhav rep\OPP\C#\Solid Principle\SRPViolation\SRPViolation\bin\Debug\SRPViolation.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\SRPViolation\SRPViolation\bin\Debug\SRPViolation.pdb
+D:\Swabhav rep\OPP\C#\Solid Principle\SRPViolation\SRPViolation\obj\Debug\SRPViolation.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\Solid Principle\SRPViolation\SRPViolation\obj\Debug\SRPViolation.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\SRPViolation\SRPViolation\obj\Debug\SRPViolation.pdb

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <label for="text">Comment here</label>
+    <input type="text" id="text">
+    <br>
+    <div id="div"></div>
+</body>
+<script src="jquery-3.3.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $(text).keyup(function () {
+            var value = $('#text').val();
+            $('#div').text(value);
+        }
+        );
+        $('#div').css(
+            {
+                "border-color": "#C1E0FF",
+                "border-weight": "1px",
+                "font-weight": "bold",
+                "border-style": "solid",
+                "font-size": "40px"
+            }
+        );
+
+    })
+</script>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <div id="id">
+
+    </div>
+        <input  type="button" id="updatebutton" value="Update" onclick="Createbutton()">
+<script>
+    var array=[];
+    
+    function Createbutton() {
+        count = 2;
+        array=[
+         "SitePoint",
+                 "Simple Steps Code",
+                "Trick question; they're both the best"
+        ];
+        
+        for (i = 0; i <=array.length-1; i++) {
+            var inputno = document.createElement("input");
+            inputno.type = "radio";
+            inputno.name='option';
+            inputno.id = i;
+            inputno.value =array[i];
+            inputno.textContent=i;
+         //   inputno.onclick = function () { alert(this.value) };
+            document.getElementById('id').append(inputno);
+        }
+        var selection=document.querySelector('input[name="option"]:checked');
+        selection=selection ? selection.value : '';  
+        alert(selection)
+    }
+</script>
+
+</html>

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Calculator
 {
-   class NegativeNumberNotSupported:Exception
+   public class NegativeNumberNotSupported:Exception
     {
 
        private string _message;

@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\StudentArrayListUsingSwitchCase\StudentArrayListUsingSwitchCase\bin\Debug\StudentArrayListUsingSwitchCase.exe
+D:\Swabhav rep\OPP\C#\StudentArrayListUsingSwitchCase\StudentArrayListUsingSwitchCase\bin\Debug\StudentArrayListUsingSwitchCase.pdb
+D:\Swabhav rep\OPP\C#\StudentArrayListUsingSwitchCase\StudentArrayListUsingSwitchCase\obj\Debug\StudentArrayListUsingSwitchCase.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\StudentArrayListUsingSwitchCase\StudentArrayListUsingSwitchCase\obj\Debug\StudentArrayListUsingSwitchCase.exe
+D:\Swabhav rep\OPP\C#\StudentArrayListUsingSwitchCase\StudentArrayListUsingSwitchCase\obj\Debug\StudentArrayListUsingSwitchCase.pdb

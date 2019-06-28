@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<body ng-app="event-app">
+    <div ng-controller='controller'>
+        <button ng-click="Add()">Load</button>
+        <img ng-hide="isHidden" ng-src="{{'spinner.jpg'}}" height='50px'>
+        <p>
+            Id: {{students.id}}
+            <br>
+            Name: {{students.name}}
+            <br>
+            Cgpa: {{students.cgpa}}
+            <br>
+            <img  ng-src="{{students.image}}" height='100px'>
+        </p>
+    
+
+    </div>
+
+</body>
+<script src="angular.js"> </script>
+<script>
+    angular.module('event-app', [])
+        .controller('controller', function ($scope,$timeout) {
+            $scope.Add = function () {
+                $scope.students = { id: 1, name: 'priyank', cgpa: 8.0, image: 'BXS_0011.jpg' }
+                
+               // $scope.isHidden=false;
+            }
+            $timeout( function(){   $scope.students = { id: 1, name: 'meet', cgpa: 7.0, image: 'BXS_0011.jpg' }; }, 3000);
+        })
+</script>
+
+</html>

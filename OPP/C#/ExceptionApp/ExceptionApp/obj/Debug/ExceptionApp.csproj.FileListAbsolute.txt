@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\ExceptionApp\ExceptionApp\bin\Debug\ExceptionApp.exe
+D:\Swabhav rep\OPP\C#\ExceptionApp\ExceptionApp\bin\Debug\ExceptionApp.pdb
+D:\Swabhav rep\OPP\C#\ExceptionApp\ExceptionApp\obj\Debug\ExceptionApp.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\ExceptionApp\ExceptionApp\obj\Debug\ExceptionApp.exe
+D:\Swabhav rep\OPP\C#\ExceptionApp\ExceptionApp\obj\Debug\ExceptionApp.pdb

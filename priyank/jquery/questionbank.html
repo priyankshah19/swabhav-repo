@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h1>Question Bank</h1>
+<head>
+    <script src="jquery-3.3.1.js"></script>
+
+</head>
+    <div id = "txt">
+        <input type="button" id ="start" value="START"><br><br>
+    </div>
+    <div id = "container">
+            <div id = "main">
+
+                    <p id="questions"></p>
+                    <p id="option"></p>
+                
+            </div>
+            <div>
+                   <br> <input type="button" id ="back" value="PREVIOUS">
+                    <input type="button" id ="next" value="NEXT">
+                    <input type="button" id ="result" value="SUBMIT">
+            </div>
+            <div>
+                    <p id="final"></p>
+            </div>
+    </div>
+    
+   
+    
+    <script>
+          var correctanswer = 0;
+        var count=-1;
+        var answer=[];
+        var answercount = 0;
+            var questions = [{
+                    id: 1,
+                    question: "What is 1*7?",
+                    options: [4, 5, 6, 7],
+                    correctAnswer: 3
+                   
+                }, {
+                    id: 2,
+                    question: "What is 7*7?",
+                    options: [20, 30, 49, 50],
+                    correctAnswer: 2
+                   
+                }, {
+                    id: 3,
+                    question: "What is 8*9?",
+                    options: [72, 99, 108, 134],
+                    correctAnswer: 0
+                }, {
+                    id: 4,
+                    question: "What is 2*5?",
+                    options: [2, 5, 10, 15],
+                    correctAnswer: 2
+                }, {
+                    id: 5,
+                    question: "What is 3*6?",
+                    options: [3, 6, 9, 18],
+                    correctAnswer: 3
+                    
+                }];
+                console.log(questions);
+                $(document).ready(function()
+                {
+                    $('#main').css(
+                        {
+                            "border-weight": "2px",
+                            "border-style" : "solid",
+                            "width" : "800px",
+                            "height" : "200px"
+    
+                        }
+                    )
+                    $('#result').css('display', 'none')
+                    $('#next').css('display', 'none')
+                    $('#back').css('display', 'none')
+                })
+                $('#start').click(function()
+                {
+                    $('#start').remove();
+                    count++;
+                    QuestionPicker();
+                    $('#next').css('display', 'block')
+                    $('#back').css('display', 'block')
+               
+                })
+                $('#next').click(function()
+                {
+                    $('#result').css('display', 'none')
+                    count++;
+                    QuestionPicker();
+                    $('input:radio[class=radio][id=radioid'+answer[count]+']').prop('checked', true)
+                    
+                       
+                })
+
+               
+
+                $('#option').change(function () {
+                answer[count] = $("input[name='rbtn']:checked").val()
+                })
+
+                function QuestionPicker()
+                {
+
+                if(count < 5 )
+                {
+                $("#option").html("");
+                var questintext = questions[count].id + ")) " + questions[count].question
+                $('#questions').text(questintext)
+                for(var i=0;i<questions[count].options.length;i++)
+                {
+                    $("#option").append($("<input type='radio' id='radioid"+i+"' class='radio' name='rbtn' value='" + i + "'/>"
+                    )).append(questions[count].options[i] + '<br>') 
+                    
+                }
+
+                }   
+                else 
+                {
+                    $('#start').css('display', 'none')
+                    $('#next').css('display', 'none')
+                    $('#back').css('display', 'none')
+                    $('#result').css('display', 'block')
+
+                }
+  
+                }
+                $('#back').click(function () {
+                if (count == 0 || count == -1) 
+                {
+                    count = 0;
+                    QuestionPicker();
+                }
+                else 
+                {
+                    count = count - 1
+                    QuestionPicker();
+                    $('input:radio[class=radio][id=radioid'+answer[count]+']').prop('checked', true)
+                   
+                }
+            })
+
+                $('#result').click(function()
+                {
+                    $('#final').html = "";
+                    for(var index=0;index<questions.length;index++)
+                    {
+                        if(questions[index].correctAnswer == answer[index])
+                        {
+                            correctanswer++;
+                        }
+                       
+                    }
+                    var wronganswer = index - correctanswer;
+                    $('#final').append("Right answer:"+correctanswer+""+"Wrong answer:"+wronganswer);
+
+                })
+
+               
+
+                
+    
+        </script>
+</body>
+</html>

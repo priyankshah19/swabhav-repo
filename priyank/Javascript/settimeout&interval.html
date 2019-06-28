@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+    <style>
+        p
+        {
+            color:red;
+            text-align: center;
+        }
+    </style>
+<body>
+        <input  type="button" id="register"  value="Clickme" onclick="setTimeout('alert(\'Hello!\')', 4000)" >
+        <input  type="button" id="regis"  value="stop" onclick="Stop()" >
+        <p>hello world</p>
+ </body>
+ <script>
+      var x=setInterval(sayhello,4000);
+     function sayhello()
+     {
+         alert("hi");
+     }
+   
+    function Stop()
+    {
+        clearInterval(x);
+    }
+ </script>
+</html>

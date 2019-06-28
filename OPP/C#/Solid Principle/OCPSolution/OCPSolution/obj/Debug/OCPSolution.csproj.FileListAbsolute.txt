@@ -1,0 +1,6 @@
+D:\Swabhav rep\OPP\C#\Solid Principle\OCPSolution\OCPSolution\bin\Debug\OCPSolution.exe.config
+D:\Swabhav rep\OPP\C#\Solid Principle\OCPSolution\OCPSolution\bin\Debug\OCPSolution.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\OCPSolution\OCPSolution\bin\Debug\OCPSolution.pdb
+D:\Swabhav rep\OPP\C#\Solid Principle\OCPSolution\OCPSolution\obj\Debug\OCPSolution.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\Solid Principle\OCPSolution\OCPSolution\obj\Debug\OCPSolution.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\OCPSolution\OCPSolution\obj\Debug\OCPSolution.pdb

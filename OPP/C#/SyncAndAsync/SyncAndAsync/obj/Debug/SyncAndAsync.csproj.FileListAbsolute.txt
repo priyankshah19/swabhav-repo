@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\SyncAndAsync\SyncAndAsync\bin\Debug\SyncAndAsync.exe.config
+D:\Swabhav rep\OPP\C#\SyncAndAsync\SyncAndAsync\bin\Debug\SyncAndAsync.exe
+D:\Swabhav rep\OPP\C#\SyncAndAsync\SyncAndAsync\bin\Debug\SyncAndAsync.pdb
+D:\Swabhav rep\OPP\C#\SyncAndAsync\SyncAndAsync\obj\Debug\SyncAndAsync.exe
+D:\Swabhav rep\OPP\C#\SyncAndAsync\SyncAndAsync\obj\Debug\SyncAndAsync.pdb

@@ -1,0 +1,9 @@
+<!doctype html>
+<html  >
+        
+    <body ng-app="" >
+     </body>
+    <script src="angular.js">
+        </script>
+   
+</html>

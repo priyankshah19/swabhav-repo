@@ -1,0 +1,4 @@
+D:\Swabhav rep\OPP\Assignment\BinaryReaderWriter\BinaryReaderWriter\bin\Debug\BinaryReaderWriter.exe
+D:\Swabhav rep\OPP\Assignment\BinaryReaderWriter\BinaryReaderWriter\bin\Debug\BinaryReaderWriter.pdb
+D:\Swabhav rep\OPP\Assignment\BinaryReaderWriter\BinaryReaderWriter\obj\Debug\BinaryReaderWriter.exe
+D:\Swabhav rep\OPP\Assignment\BinaryReaderWriter\BinaryReaderWriter\obj\Debug\BinaryReaderWriter.pdb

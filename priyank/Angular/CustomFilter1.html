@@ -1,0 +1,29 @@
+<html>
+<body ng-app='custom1-app' ng-controller='controller'>
+        <ul>
+                <li ng-repeat="student in students">
+                  {{ student.name |startsWithP }}
+                </li>
+              </ul>
+</body>
+<script src="angular.js"></script>
+<script>
+    var app = angular.module('custom1-app', [])
+    app.controller('controller', function ($scope) {
+        $scope.students = [{ name: 'priyank' }, { name: 'ps' }, { name: 'ratnesh' }];
+    })
+    app.filter('startsWithP', function () {
+        return function (items) {
+            var filter = [];
+            for (var i = 0; i < items.length; i++) {
+                var item = items[i];
+                if (/p/i.test(item.name.substring(0, 1))) {
+                    filter.push(item);
+                }
+            }
+            return filter;
+        }
+    })
+</script>
+
+</html>

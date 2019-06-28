@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html>
+        <script src="jquery-3.3.1.js"></script>
+
+        <script>
+            GetFacts().done(function(data)
+            {
+                 console.log(results);
+            })
+            function GetFacts(number)
+            {
+                return $.get("http://www.numbersapi.com/"+number);                                                                                                                                ;
+            }
+        </script>
+</html>

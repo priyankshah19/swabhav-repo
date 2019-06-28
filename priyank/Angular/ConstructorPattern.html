@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Constructor Example</h2>
+
+<p id="demo"></p>
+
+<script>
+
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
+console.log(myFather);
+console.log(myMother)
+Person.prototype.nationality = "English";
+//document.getElementById("demo").innerHTML =
+//"My father is " + myFather.age +" My father nationality is "+myFather.nationality+ ". My mother is " + myMother.age + "." ; 
+
+</script>
+
+</body>
+</html>

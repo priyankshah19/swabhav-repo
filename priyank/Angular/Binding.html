@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<body ng-app="binding-app">
+    <h1>One Way</h1>
+    <div ng-controller='controller'>
+     
+        <p>
+            Age: {{students.age}}
+            <br>
+            Name: {{students.name}}
+            <br>
+            CGPA: {{students.cgpa}}
+            <br>
+            
+        </p>
+    </div>
+    <div ng-controller='controller'>
+            <h1>Two Way</h1>
+            <label for="age">Age</label>
+            <input type="text" id="age" ng-model='students.age' >
+            <br>
+            <label for="name">Name</label>
+            <input type="text" id="name" ng-model='students.name'>
+            <br>
+            <label for="cgpa">CGPA</label>
+            <input type="text" id="cgpa" ng-model='students.cgpa'>
+            <br>
+    
+    </div>
+    <div ng-controller='controller'>
+            <h1>One Time</h1>
+           
+            <p> {{::students.age}}</p>
+           <p>{{::students.name}}</p>
+            <p>{{::students.cgpa}}</p>
+    
+    </div>
+
+</body>
+<script src="angular.js"> </script>
+<script>
+    angular.module('binding-app', [])
+        .controller('controller', function ($rootScope) {
+        
+                $rootScope.students = { age: 22, name: 'priyank', cgpa: 8.0 }
+            
+        })
+        
+    
+        
+</script>
+
+</html>

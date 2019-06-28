@@ -1,0 +1,40 @@
+<html>
+<body ng-app='fontsize' ng-style="bgcolor">
+    <div ng-controller='controller' >
+            <select ng-model="selectedcolor" ng-options="option.name as option.name for option in color" ng-change="pickcolor()">
+                    <option value="">Select a type</option>    
+                  </select>
+            <label for="textbox">Comment Anything</label>
+            <input type="text" id="textbox" ng-model='comment'  >
+            <br>
+            <p ng-style="size" >
+                {{comment}}
+            </p>
+            <label for="name"> Font size</label>
+            <input type="text" id="fontsize" ng-model="newsize" ng-change="fontsize()">
+            <br>
+
+    </div>
+</body>
+<script src="angular.js"> </script>
+<script>
+    angular.module('fontsize',[])
+    .controller('controller',['$rootScope','$scope',function($rootScope,$scope)
+    {
+           
+           $scope.fontsize=function(){
+               $scope.size={
+                   "font-size":$scope.newsize
+               }
+
+           }
+           $scope.color=[{name:"red"},{name:"green"},{name:"yellow"}]
+            $scope.selectedcolor = 'red';
+            $scope.pickcolor = function () {
+                $rootScope.bgcolor = {
+                    "background-color": $scope.selectedcolor
+                }
+            }
+    }])
+</script>
+</html>

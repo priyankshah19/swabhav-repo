@@ -1,0 +1,6 @@
+D:\Swabhav rep\OPP\C#\Design Pattern\Structual Pattern\AdapterApp\AdapterApp\bin\Debug\AdapterApp.exe.config
+D:\Swabhav rep\OPP\C#\Design Pattern\Structual Pattern\AdapterApp\AdapterApp\bin\Debug\AdapterApp.exe
+D:\Swabhav rep\OPP\C#\Design Pattern\Structual Pattern\AdapterApp\AdapterApp\bin\Debug\AdapterApp.pdb
+D:\Swabhav rep\OPP\C#\Design Pattern\Structual Pattern\AdapterApp\AdapterApp\obj\Debug\AdapterApp.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\Design Pattern\Structual Pattern\AdapterApp\AdapterApp\obj\Debug\AdapterApp.exe
+D:\Swabhav rep\OPP\C#\Design Pattern\Structual Pattern\AdapterApp\AdapterApp\obj\Debug\AdapterApp.pdb

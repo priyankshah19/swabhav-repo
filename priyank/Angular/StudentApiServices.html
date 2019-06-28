@@ -1,0 +1,314 @@
+<html>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<body ng-app="studentapiservice-app" class="container-fluid">
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th {
+            text-align: left;
+        }
+    </style>
+    <div ng-controller="controller">
+        <div class="border border-dark"
+            style="background-color:yellow; width:350px; padding-top:20px;border-style: groove;">
+            <form id="formid" class="bg-dark text-white">
+                    <h3>Student Form</h3>
+                    <i class="glyphicon glyphicon-pencil"></i>
+                <label for="rollno">Rollno</label>
+                <input type="number" id="rollno" ng-model="rollno">
+                <br>
+                <br>
+                <i class="glyphicon glyphicon-user"></i> 
+                <label for="name">Name</label>
+                <input type="text" id="name" ng-model="name" >
+                <br>
+                <br>
+                <i class="glyphicon glyphicon-heart"></i>
+                <label for="age">Age</label>
+                <input type="number" id="age" ng-model="age">
+                <br>
+                <br>
+                <i class="glyphicon glyphicon-envelope"></i>
+                <label for="email">Email</label>
+                <input type="text" id="email" ng-model="email">
+                <br>
+                <br>
+                <i class="glyphicon glyphicon-calendar"></i>
+                <label for="date">Date</label>
+                <input type="date" id="date" ng-model="date">
+                <br>
+                <br>
+                <i class="glyphicon glyphicon-user"></i>
+                <label for="Ismale">Gender</label>
+                <select id="Ismale" ng-model="ismale">
+                    <option value="true" ng-selected="Male">Male</option>
+                    <option value="false" ng-selected="Female">Female</option>
+                </select>
+                <br>
+                <br>
+                <input type="button" id="addbutton" value="Add" ng-click="SendData()" class="btn btn-primary visible-lg"
+                    ng-hide="isadd">
+                <input type="button" id="updatebutton" value="Update" ng-click="UpdateData()"
+                    class="btn btn-primary visible-lg" ng-hide="isupdate">
+
+                <br>
+            </form>
+            <p>{{msg}}</p>
+        </div>
+        <div>
+            <p ng-model='count'>Total records :{{count}}</p>
+            
+            <button type="button" id="search" ng-click="Search()" ng-model='Search'>Load Records </button>
+            <table class="table table-bordered" id="table">
+                <thead>
+                    <tr>
+                        <th>Id </th>
+                        <th>Rollno </th>
+                        <th>Name </th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Ismale</th>
+                    </tr>
+                    <tr ng-repeat='student in result'>
+                        <td>{{student.id}}</td>
+                        <td>{{student.rollNo}}</td>
+                        <td>{{student.name}}</td>
+                        <td>{{student.age}}</td>
+                        <td>{{student.email}}</td>
+                        <td>{{student.date|date: dd/mm/yyyy}}</td>
+                        <td>{{student.isMale}}</td>
+                        <td><input type="button" value='Delete' id="delete" ng-click="DeleteData(student.id)" class="glyphicon glyphicon-remove btn btn-danger visible-lg"></td>
+                        <td><input type="button" value='Edit' id="edit" ng-click="EditData(student.id)" class="btn btn-info visible-lg">
+
+                    </tr>
+
+                </thead>
+            </table>
+        </div>
+    </div>
+
+</body>
+<script src="angular.js"></script>
+<script>
+    var count = 0;
+    var studentid;
+    var app = angular.module('studentapiservice-app', [])
+    app.factory('apiservices', ['$log', '$rootScope', '$http', '$q', function ($log, $rootScope, $http, $q) {
+        var object = {};
+        object.getstudentdetails = function () {
+            return $q(function (resolve, reject) {
+                $http({
+                    method: 'Get',
+                    url: "http://gsmktg.azurewebsites.net:80/api/v1/techlabs/test/students/"
+                }).then(function Success(response) {
+                    console.log(response.data);
+                    resolve(response.data)
+
+                }), function myError(response) {
+                    $rootScope.details = response.statusText
+                    reject(response.statusText)
+
+                }
+
+            })
+
+        }
+        object.addDetails = function (sub) {
+            console.log(rollno);
+            return $q(function (resolve, reject) {
+                $http(
+                    {
+                        method: 'post',
+                        data: sub,
+                        url: "http://gsmktg.azurewebsites.net:80/api/v1/techlabs/test/students/"
+                    }).then(function Success(status) {
+                        resolve(status)
+                    }), function myError(status) {
+                        reject(status);
+                    }
+
+            })
+
+
+        }
+
+        object.deleteOperation = function (ID) {
+            var url = "http://gsmktg.azurewebsites.net:80/api/v1/techlabs/test/students/" + ID;
+            return $http(
+                {
+                    method: 'delete',
+                    data: ID,
+                    url: url
+                });
+        }
+
+        object.retrieve = function (id) {
+            console.log(id);
+            return $q(function (resolve, reject) {
+                $http({
+                    method: 'GET',
+                    url: "http://gsmktg.azurewebsites.net:80/api/v1/techlabs/test/students/" + id
+
+                }).then(function success(response) {
+                    resolve(response.data);
+                    console.log(response.data);
+
+                }), function error(response) {
+                    reject(response)
+                }
+            })
+
+        }
+        object.UpdateDetails = function (data, id) {
+            return $q(function (resolve, reject) {
+                $http(
+                    {
+                        method: 'put',
+                        data: data,
+                        url: "http://gsmktg.azurewebsites.net:80/api/v1/techlabs/test/students/" + id
+                    }).then(function Success(status) {
+                        resolve(status)
+                    }), function myError(status) {
+                        reject(status);
+                    }
+
+            })
+
+
+        }
+        return object;
+    }])
+    app.controller('controller', ['$scope', 'apiservices', '$http', '$rootScope', function ($scope, apiservices, $http, $rootScope) {
+        $scope.isupdate = true;
+        $scope.isadd = false;
+        $scope.Clear = function () {
+            $scope.name = '';
+            $scope.rollno = '';
+            $scope.date = '';
+            $scope.email = '';
+            $scope.age = '';
+
+
+        }
+        $scope.Search = function () {
+            apiservices.getstudentdetails().then(function (result) {
+                $scope.result = result;
+                count = result.length;
+                $scope.count = count;
+            })
+
+
+
+        }
+        $scope.SendData = function () {
+            if(($scope.name==undefined)||($scope.rollno==undefined)||($scope.age==undefined)||($scope.email==undefined)||($scope.date==null)||($scope.ismale==undefined))
+            {
+              $scope.msg='please fill the form';
+            }
+           else
+           {
+            $scope.msg='';
+            var data =
+                ({
+
+                    rollNo: $scope.rollno,
+                    name: $scope.name,
+                    age: $scope.age,
+                    email: $scope.email,
+                    date: $scope.date,
+                    isMale: $scope.ismale
+                });
+
+            apiservices.addDetails(data).then(function (d) {
+                $scope.Search();
+                $scope.Clear();
+
+
+            }, function (error) {
+                console.log('Oops! Something went wrong while saving the data.')
+            })
+
+
+
+           }
+           
+        }
+        $scope.DeleteData = function (id) {
+            //   console.log(id);
+            apiservices.deleteOperation(id).then(function (d) {
+                document.querySelector('#search').click();
+
+            }, function (error) {
+                console.log('Oops! Something went wrong while saving the data.')
+            });
+        }
+        $scope.EditData = function (event) {
+            $scope.isupdate = false;
+            $scope.isadd = true;
+            apiservices.retrieve(event).then(function (result) {
+                //   console.log(result[0].name)
+
+                $scope.name = result[0].name;
+                console.log($scope.name);
+                $scope.rollno = result[0].rollNo;
+                console.log($scope.rollno);
+                var newdate = new Date(result[0].date)
+                $scope.date = newdate;
+                console.log($scope.date);
+                $scope.email = result[0].email;
+                console.log($scope.email);
+                $scope.age = result[0].age;
+                console.log($scope.age);
+                if (result[0].isMale == true) {
+                    $scope.Male = true;
+                }
+                else {
+                    $scope.Female = true;
+                }
+                $scope.ismale = result[0].isMale;
+
+                studentid = result[0].id;
+            })
+        }
+        $scope.UpdateData = function () {
+           
+          
+            var data =
+                ({
+
+                    rollNo: $scope.rollno,
+                    name: $scope.name,
+                    age: $scope.age,
+                    email: $scope.email,
+                    date: $scope.date,
+                    isMale: $scope.ismale
+                });
+            var id = studentid;
+            apiservices.UpdateDetails(data, id).then(function (d) {
+                $scope.Search();
+
+
+            }, function (error) {
+                console.log('Oops! Something went wrong while saving the data.')
+            })
+
+            console.log(data);
+            $scope.isupdate = true;
+            $scope.Clear();
+            $scope.isadd = false;
+        }
+
+    }])
+</script>
+
+</html>

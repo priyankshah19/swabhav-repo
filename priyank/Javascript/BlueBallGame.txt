@@ -1,0 +1,11 @@
+<!DOCTYPE HTML>
+<html>
+<body bgcolor="#ffff66">
+    <h1>Number Guessing Game</h1>
+    Game Description:<p id="pid">1-) You have to choose number from 1 to 50 <br>
+       2-) If you click on number greater than Random Number than it will become red.<br>
+       3-) If you click on number less than Random Number than it will become blue.<br>
+       4-) If you click on correct number than it will become green.<br>
+       5-) You have 10 chance to choose correct number and win these game.<br>
+     </p><br><br>
+     <input  type="button" id="start"  value="Start" onclick="StartGame()">

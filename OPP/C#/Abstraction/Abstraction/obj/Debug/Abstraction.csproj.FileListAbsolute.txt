@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\Abstraction\Abstraction\bin\Debug\Abstraction.exe
+D:\Swabhav rep\OPP\C#\Abstraction\Abstraction\bin\Debug\Abstraction.pdb
+D:\Swabhav rep\OPP\C#\Abstraction\Abstraction\obj\Debug\Abstraction.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\Abstraction\Abstraction\obj\Debug\Abstraction.exe
+D:\Swabhav rep\OPP\C#\Abstraction\Abstraction\obj\Debug\Abstraction.pdb

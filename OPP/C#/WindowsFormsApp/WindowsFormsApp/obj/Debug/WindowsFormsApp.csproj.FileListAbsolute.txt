@@ -1,0 +1,9 @@
+D:\Swabhav rep\OPP\C#\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe.config
+D:\Swabhav rep\OPP\C#\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe
+D:\Swabhav rep\OPP\C#\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.pdb
+D:\Swabhav rep\OPP\C#\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form1.resources
+D:\Swabhav rep\OPP\C#\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Properties.Resources.resources
+D:\Swabhav rep\OPP\C#\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.GenerateResource.Cache
+D:\Swabhav rep\OPP\C#\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
+D:\Swabhav rep\OPP\C#\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Module Example</h2>
+
+<p id="demo"></p>
+
+<script>
+
+function makePerson() {
+    var object={};
+    var _firstname,_lastname;
+  object.setFname=function(fname){
+      _firstname=fname;
+
+  }
+  object.setLname=function(lname){
+      _lastname=lname;
+      
+  }
+  object.getFullname=function(){
+      return "First name  " +_firstname + "  Last name "+_lastname;
+  }
+  return object;
+}
+
+var person1=makePerson();
+person1.setFname('priyank');
+person1.setLname('shah');
+console.log(person1.getFullname());
+console.log(person1);
+var person2=makePerson();
+person2.setFname('Ratnesh');
+person2.setLname('dubey');
+console.log(person2.getFullname());
+console.log(person2);
+
+</script>
+
+</body>
+</html>

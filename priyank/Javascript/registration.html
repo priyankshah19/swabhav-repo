@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+    <div id='form'>
+        <form id="form1">
+                <div style="float:left; border:1px solid black">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name='firstname'>
+                <br>
+                <br>
+                <label for="password">Password</label>
+                <input type="password" id="password" name='password'>
+                <br>
+                <br>
+                <label for="rpassword">Renter Password</label>
+                <input type="password" id="rpassword" name='rpassword'>
+                <br>
+                <br>
+                </form>
+                <br><br>
+                <input  type="button" id="register"  value="Register" onclick="AddData()">
+            </div >
+                <div style="float:right; border:1px solid black" id="form2">
+                    <form >
+                            <label for="fname">First Name</label>
+                            <input type="text" id="lname" name='firstname'>
+                            <br>
+                            <br>
+                            <label for="password">Password</label>
+                            <input type="password" id="lpassword" name='password'>
+                    </form>
+                    <input  type="button" id="login"  value="Login" onclick="Retrive()">
+                </div>
+                
+                <div style="float:inline-start;clear:left;height:300px;width:290px; border:1px solid black" id="loggedin">
+                       
+                        <label for="text">Add task</label>
+                       <input type="text" id="text">
+                       <p id="pid"> </p>
+
+                    </div>
+            </div>
+                
+<script>
+    var nameid=document.getElementById('fname');
+    var passwordid=document.getElementById('password');
+    arrayinput=[];
+     var task=[];
+    var userindex;
+    arrayinput=JSON.parse(localStorage.getItem('key'));
+    var id=1;
+    var object;
+    var currentuser=0;
+    function AddData()
+    {
+        var name=nameid.value;
+    var password=passwordid.value;  
+
+     object=
+             {
+               id,
+              name,
+              password,
+              task,
+              currentuser }
+              ;
+     arrayinput.push(object);
+     localStorage.setItem('key',JSON.stringify(arrayinput));
+     id++;
+     
+    }
+    function Retrive()
+    {  
+        var array=[];
+        var result=localStorage.getItem('key');
+        result=JSON.parse(result);
+        for(var index=0;index<result.length;index++)
+        {  
+    
+            var object=result[index];
+            var id=object.id;
+            var name=object.name;
+            var password=object.password;
+            var loginname=document.getElementById('lname').value;
+            var loginpassword=document.getElementById('lpassword').value;
+            if((loginname==name) && (loginpassword==password))
+            {
+               
+             alert('logged in');
+             document.getElementById('form1').style.visibility="hidden";
+             document.getElementById('form2').style.visibility="hidden";
+             document.getElementById('loggedin').style.visibility="visible";
+              document.getElementById('loggedin').innerHTML+=name+"<input  type='button' id='logout'  value='Logout' onclick='Logout()'>";
+              userindex=index;
+           //   object.currentuser=1;
+           //   localStorage.setItem('key',JSON.stringify(object));
+             break;
+            }
+         else{
+           //  alert('error');
+              continue;
+            } 
+        }
+        document.getElementById('loggedin').addEventListener('keypress',function(event)
+            {
+                var store=JSON.parse(localStorage.getItem('key'));
+                
+            if(13==event.keyCode)
+            {
+               var arr=[];
+               if(store[userindex].task==null)
+               {
+                   store[userindex].task='x';
+               }
+               else
+               {
+                for(var i=0;i<store[userindex].task.length;i++)
+               {
+                   arr[i]=store[index].task[i];
+               }
+               }
+               arr.push(event.target.value);
+               store[userindex].task=arr;
+               localStorage.setItem('key',JSON.stringify(store));
+               Display();
+            }
+           
+            })
+        
+    }
+  //    window.onload=Onload();
+     //document.getElementById('loggedin').style.visibility="hidden";
+     function Onload()
+     {
+        // document.getElementById('loggedin')
+        var log=JSON.parse(localStorage.getItem('key'));
+        console.log(log);
+        for(var i=0;i<log.length;i++)
+        {
+            if(log[i].currentuser==1)
+            {
+                var name1=log[i].name;
+               var password1=log[i].password;
+               document.getElementById('lname').value=name1;
+             document.getElementById('lpassword').value=password1;
+             document.getElementById('login').click();
+            
+            }
+        }
+         
+            
+         
+     } 
+    function Display()
+    {
+        document.getElementById('pid').innerHTML='';
+    var display=JSON.parse(localStorage.getItem('key'));
+    var object=userindex;
+    
+
+        for(var i=0;i<display[object].task.length;i++)
+        {
+            document.getElementById('pid').innerHTML+=display[object].task[i]+'<br>';
+        }
+
+        
+    
+    
+    
+    
+    }
+    function Logout()
+    {
+
+        var store=JSON.parse(localStorage.getItem('key'));
+        store[userindex].currentuser=0;
+        localStorage.setItem('key',JSON.stringify(store));
+             document.getElementById('form1').style.visibility="visible";
+             document.getElementById('form2').style.visibility="visible";
+             document.getElementById('loggedin').style.visibility="hidden";
+             window.location.href = "registration.html";
+    }
+
+</script>
+
+</body>
+</html>

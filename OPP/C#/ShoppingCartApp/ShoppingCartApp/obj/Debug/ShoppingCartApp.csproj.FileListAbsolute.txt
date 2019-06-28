@@ -1,0 +1,6 @@
+D:\Swabhav rep\OPP\C#\ShoppingCartApp\ShoppingCartApp\bin\Debug\ShoppingCartApp.exe.config
+D:\Swabhav rep\OPP\C#\ShoppingCartApp\ShoppingCartApp\bin\Debug\ShoppingCartApp.exe
+D:\Swabhav rep\OPP\C#\ShoppingCartApp\ShoppingCartApp\bin\Debug\ShoppingCartApp.pdb
+D:\Swabhav rep\OPP\C#\ShoppingCartApp\ShoppingCartApp\obj\Debug\ShoppingCartApp.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\ShoppingCartApp\ShoppingCartApp\obj\Debug\ShoppingCartApp.exe
+D:\Swabhav rep\OPP\C#\ShoppingCartApp\ShoppingCartApp\obj\Debug\ShoppingCartApp.pdb

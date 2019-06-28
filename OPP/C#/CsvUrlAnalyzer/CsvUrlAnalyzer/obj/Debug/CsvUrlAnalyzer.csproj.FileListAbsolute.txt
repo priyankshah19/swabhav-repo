@@ -1,0 +1,6 @@
+D:\Swabhav rep\OPP\C#\CsvUrlAnalyzer\CsvUrlAnalyzer\bin\Debug\CsvUrlAnalyzer.exe.config
+D:\Swabhav rep\OPP\C#\CsvUrlAnalyzer\CsvUrlAnalyzer\bin\Debug\CsvUrlAnalyzer.exe
+D:\Swabhav rep\OPP\C#\CsvUrlAnalyzer\CsvUrlAnalyzer\bin\Debug\CsvUrlAnalyzer.pdb
+D:\Swabhav rep\OPP\C#\CsvUrlAnalyzer\CsvUrlAnalyzer\obj\Debug\CsvUrlAnalyzer.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\CsvUrlAnalyzer\CsvUrlAnalyzer\obj\Debug\CsvUrlAnalyzer.exe
+D:\Swabhav rep\OPP\C#\CsvUrlAnalyzer\CsvUrlAnalyzer\obj\Debug\CsvUrlAnalyzer.pdb

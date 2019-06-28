@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+    Enter Comment:<input type="text" id="textbox">
+    <p>Your Comments: <span id="pid"></span></p>
+    <script>
+       var count=0
+          var arrayinput=[];
+          var oldoutput=[];
+        document.getElementById('textbox').addEventListener('keypress',function(event){
+          var paragraphid=document.getElementById('pid');
+         
+          if(13==event.keyCode)
+          {
+            // arrayinput[count]=this.value;
+            // count++;
+            arrayinput.push(this.value);
+            
+         
+             Display(arrayinput);
+          }
+        })
+
+     function Display(arrayinput)
+        {
+            var str=" ";
+            var paragraphid=document.getElementById('pid');
+            paragraphid.innerHTML="";
+            var count1=arrayinput.length-1;
+            for(var i=arrayinput.length-1;i>=0;i--)
+            {
+                var button=document.createElement('button')
+               button.textContent='X';
+               button.id=count1;
+               button.value=count1;
+               button.onclick=ClickHandler;
+               var text=document.createTextNode(arrayinput[count1])
+               button.text=text;
+              paragraphid.appendChild(text);
+              paragraphid.appendChild(button);
+              count1--;
+                
+            }
+                  
+        }
+        function  ClickHandler(event)
+           {
+            var paraid=document.getElementById('pid');
+               var buttonid=event.target.id;
+              arrayinput.splice(buttonid,1)
+            
+               Display(arrayinput);
+              // var index=arrayinput.indexOf(buttonid);
+              // arrayinput.splice(buttonid,1);
+            //  paragraphid.removeChild(text);
+             // paragraphid.removeChild(button);
+              // var output=event.target.text;
+              // console.log(output);
+           } 
+
+           
+    </script>
+</body>
+</html>

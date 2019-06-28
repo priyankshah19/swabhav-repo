@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="range" min="1" max="100" value="10" id="myrange">
+    <p>Value: <span id="pid"></span></p>
+    <p>You Have Clicked on: <span id="cid"></span></p>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $('#myrange').on('input',function()
+            
+        {
+             var output=this.value
+            $('#pid').text(output);
+            for(var index=1;index<=output;index++)
+            {
+               var button=document.createElement('button')
+               button.text=this.value;
+               button.id=index;
+               button.innerHTML=index;
+               button.onclick=clickHandler;
+                $('#pid').append(button);
+            }
+            function clickHandler(event)
+            {
+              var text=event.target.textContent;
+            //  $('#cid').text(text);
+              $('#cid').html(text);
+             
+
+            }
+            
+        });
+        } );
+        
+    </script>
+</body>
+</html>

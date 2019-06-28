@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<form id="formid">
+<label for="fname">First Name</label>
+<input type="text" id="fname">
+<br>
+<br>
+Gender:<input type="radio" name="gender" value="male" id="male">
+<label for="gender">Male</label>
+<input type="radio" name="gender" value="female" id="female">
+<label for="gender">Female</label>
+<br>
+<br>
+<label for="card">Credit Card</label>
+<select id="card">
+    <option selected disabled>--select any card--</option>
+    <option value="Visa">Visa</option>
+    <option value="Rupee">Rupee</option>
+    <option value="American Express">American Express</option>
+</select>
+<br>
+<br>
+</form>
+<input  type="button" id="addbutton"  value="Add" onclick="AddData()">
+<input  type="button" id="updatebutton" value="Update" onclick="UpdateData()">
+<p><span id="paragraphid" ></span></p>
+<div>
+    <table class="table" id="table" border="1px">
+        <thead>
+            <tr> <!--we have to create element of table row-->
+                <th>Name</th>
+                <th>Gender</th>
+                <th>CardType</th>
+                <th>Delete Option</th>
+                <th>Edit Option</th>
+                <th>Cancel Option</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<script>
+     var addbutton=document.getElementById('addbutton');
+     var updatedbutton=document.getElementById('updatebutton');
+     var editbutton=document.getElementById('editbutton');
+     var cancelbutton;
+     function clear()
+     {
+        document.getElementById('addbutton').disabled=false;
+        document.getElementById('updatebutton').disabled=true;
+        document.getElementById('cancelbuttonid').disabled=true;
+        document.getElementById('formid').reset();
+     }
+    function AddData()
+    {
+        var name=document.getElementById('fname').value;
+        var gender = document.querySelector('input[name="gender"]:checked');
+        gender = gender ? gender.value : '';  
+        var card=document.getElementById('card').value;
+        if((name=='')|| (gender==false)||(card=='--select any card--'))
+        {
+            alert("please fill all the details");
+        }
+        else
+        {
+            Display(name,gender,card);
+       document.getElementById('formid').reset();
+        }
+        
+    }
+    function Display(name,gender,card)
+    {
+        var new_row=" ";
+         new_row+="<td>"+ name +"</td><td>"+ gender +"</td><td>" + card+"</td><td><button id='buttonid' style='height:25px; width:100px' onclick='DeleteData(this)'>Delete</button></td><td>" +"<button id='editbuttonid' style='height:25px; width:100px' onclick='EditData(this)'>Edit</button></td><td>"+"</td>";
+         var tr=document.createElement('tr');
+         tr.innerHTML=new_row;
+        document.getElementById('table').append(tr);
+     
+    }
+    function DeleteData(row)
+    {
+       var option= confirm("Press ok to continue");
+        if(option==true)
+        {
+         var index=row.parentNode.parentNode.rowIndex;  //this will get row index of button cliecked for delete
+        document.getElementById('table').deleteRow(index);
+        }
+        else
+        {
+              alert("you have pressed cancel");
+        }
+        
+    }
+    var index=0;
+    function EditData(row)
+    {
+        
+        var tableid=document.getElementById('table');
+        index=row.parentNode.parentNode.rowIndex;
+        var firstelement=tableid.rows[index].cells[0].innerHTML;
+        var secondelement=tableid.rows[index].cells[1].innerHTML;
+        var thirdelement=tableid.rows[index].cells[2].innerHTML;
+        tableid.rows[index].cells[5].innerHTML='<button id="cancelbuttonid" style="height:25px; width:100px" onclick="CancelData(this)">Cancel button</button></td>';
+        cancelbutton=document.getElementById('cancelbuttonid');
+         document.getElementById('fname').value=firstelement;
+        if(secondelement=='male')
+        {
+            document.getElementById('male').checked=true;
+        }
+        else
+        {
+         document.getElementById('female').checked=true;
+        }
+        document.getElementById('card').value=thirdelement; 
+                  addbutton.setAttribute("disabled",true);// document.getElementById('addbutton').disabled=true; 
+                  document.getElementById('updatebutton').disabled=false;
+               //  document.getElementById('cancelbuttonid').disabled=false;
+    }
+    function CancelData(row)
+    {
+        clear();
+        //addbutton.removeAttribute("disabled");
+       // document.getElementById('formid').reset();
+      //  addbutton.setAttribute("disabled",false);
+        
+    }
+    function UpdateData()
+    {
+        //var rowindex=EditData();
+        addbutton.removeAttribute("disabled");
+        cancelbutton.setAttribute("disabled",true);
+        var tableid=document.getElementById('table');
+        if(document.getElementById('fname').value=='')
+        {
+            alert("please fill all the details");
+        }
+        else
+        {
+        tableid.rows[index].cells[0].innerHTML=document.getElementById('fname').value;
+        var gender = document.querySelector('input[name="gender"]:checked');
+        gender = gender ? gender.value : '';  
+        tableid.rows[index].cells[1].innerHTML=gender;
+        tableid.rows[index].cells[2].innerHTML=document.getElementById('card').value;
+        }
+        
+       // document.getElementById('cancelbuttonid').disabled=true;
+        document.getElementById('formid').reset();
+        
+    }
+</script>
+</body>
+</html>

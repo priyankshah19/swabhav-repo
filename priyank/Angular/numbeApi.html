@@ -1,0 +1,55 @@
+<html>
+
+<body ng-app="numberapi-app">
+    <div ng-controller="controller">
+        <label for="number">Age</label>
+        <input type="number" id="fact" ng-model='getnumber'>
+        <br>
+        <input type="button" id="search" value="Search" ng-click="Search()">
+        <p>{{fact |toMakeUpperCase}} </p>
+    </div>
+
+</body>
+<script src="angular.js"></script>
+<script>
+    var app = angular.module('numberapi-app', [])
+    app.controller('controller',['$scope','$http', function ($scope, $http) {
+        $scope.Search = function () {
+            var number = $scope.getnumber;
+            $http({
+                method: 'Get',
+                url: "http://numbersapi.com/" + number
+            }).then(function Success(response) {
+                $scope.fact = response.data
+            }), function myError(response) {
+                $scope.fact = response.statusText
+                console.log($scope.fact);
+            }
+
+        }
+
+
+    }])
+    app.filter('toMakeUpperCase', function () {
+        return function (input) {
+            if (input==undefined)
+            {
+                return;
+            }
+
+                input = input.toLowerCase().split(' ');
+                console.log(input);
+            for (var i = 0; i < input.length; i++) {
+                
+                input[i] = input[i].charAt(0).toUpperCase() + input[i].substring(1);
+
+
+            }
+            return input.join(' ');
+            console.log(input.join(''));
+
+        }
+    })
+</script>
+
+</html>

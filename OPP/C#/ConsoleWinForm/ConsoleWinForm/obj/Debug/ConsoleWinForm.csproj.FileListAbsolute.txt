@@ -1,0 +1,6 @@
+D:\Swabhav rep\OPP\C#\ConsoleWinForm\ConsoleWinForm\bin\Debug\ConsoleWinForm.exe.config
+D:\Swabhav rep\OPP\C#\ConsoleWinForm\ConsoleWinForm\bin\Debug\ConsoleWinForm.exe
+D:\Swabhav rep\OPP\C#\ConsoleWinForm\ConsoleWinForm\bin\Debug\ConsoleWinForm.pdb
+D:\Swabhav rep\OPP\C#\ConsoleWinForm\ConsoleWinForm\obj\Debug\ConsoleWinForm.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\ConsoleWinForm\ConsoleWinForm\obj\Debug\ConsoleWinForm.exe
+D:\Swabhav rep\OPP\C#\ConsoleWinForm\ConsoleWinForm\obj\Debug\ConsoleWinForm.pdb

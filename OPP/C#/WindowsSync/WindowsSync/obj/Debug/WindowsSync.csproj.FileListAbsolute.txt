@@ -1,0 +1,9 @@
+D:\Swabhav rep\OPP\C#\WindowsSync\WindowsSync\bin\Debug\WindowsSync.exe.config
+D:\Swabhav rep\OPP\C#\WindowsSync\WindowsSync\bin\Debug\WindowsSync.exe
+D:\Swabhav rep\OPP\C#\WindowsSync\WindowsSync\bin\Debug\WindowsSync.pdb
+D:\Swabhav rep\OPP\C#\WindowsSync\WindowsSync\obj\Debug\WindowsSync.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\WindowsSync\WindowsSync\obj\Debug\WindowsSync.Form1.resources
+D:\Swabhav rep\OPP\C#\WindowsSync\WindowsSync\obj\Debug\WindowsSync.Properties.Resources.resources
+D:\Swabhav rep\OPP\C#\WindowsSync\WindowsSync\obj\Debug\WindowsSync.csproj.GenerateResource.Cache
+D:\Swabhav rep\OPP\C#\WindowsSync\WindowsSync\obj\Debug\WindowsSync.exe
+D:\Swabhav rep\OPP\C#\WindowsSync\WindowsSync\obj\Debug\WindowsSync.pdb

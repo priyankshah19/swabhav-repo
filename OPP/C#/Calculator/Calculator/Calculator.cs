@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Calculator
 {
-    class Calculators
+    class Calculator
 
 
     {

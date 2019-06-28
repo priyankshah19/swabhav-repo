@@ -1,0 +1,6 @@
+D:\Swabhav rep\OPP\C#\CalculatorUnitTesting\CalculatorUnitTesting\bin\Debug\CalculatorUnitTesting.exe.config
+D:\Swabhav rep\OPP\C#\CalculatorUnitTesting\CalculatorUnitTesting\bin\Debug\CalculatorUnitTesting.exe
+D:\Swabhav rep\OPP\C#\CalculatorUnitTesting\CalculatorUnitTesting\bin\Debug\CalculatorUnitTesting.pdb
+D:\Swabhav rep\OPP\C#\CalculatorUnitTesting\CalculatorUnitTesting\obj\Debug\CalculatorUnitTesting.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\CalculatorUnitTesting\CalculatorUnitTesting\obj\Debug\CalculatorUnitTesting.exe
+D:\Swabhav rep\OPP\C#\CalculatorUnitTesting\CalculatorUnitTesting\obj\Debug\CalculatorUnitTesting.pdb

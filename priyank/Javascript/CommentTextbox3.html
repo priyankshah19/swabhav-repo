@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<label for="text">Comment here</label>
+<input type="text" id="text">
+<br>
+<br>
+<label for="paragraphid">Your Comments</label>
+<p><span id="paragraphid"></span></p>
+<label for="paragraph2id">Your Old Comments</label>
+<p><span id="paragraph2id"></span></p>
+<script>
+    var arrayinput=[];
+    var outputarray=[];
+    var finalarray=[];
+    var finalcount=0;
+    var button='';
+     window.onload=function(){
+         var finaloutput=JSON.parse(localStorage.getItem('key'));
+         arrayinput.push(finaloutput);
+          var str=localStorage.setItem('key',JSON.stringify(arrayinput));
+          var a=str.split(',');
+          console.log(a);
+         document.getElementById('paragraph2id').innerHTML=JSON.parse(localStorage.getItem('key'));
+        
+       //  Display2(outputarray);
+     }
+    
+    document.getElementById('text').addEventListener('keypress',function(event){
+        var count=0;
+        if(13==event.keyCode)
+        {
+           count++;
+          arrayinput.push(this.value);
+          var string="gh,aaa";
+           Display(arrayinput);
+           Display2(outputarray);
+           
+        }
+       localStorage.setItem('key',JSON.stringify(arrayinput));
+       finalcount=finalcount+count;
+    })
+    function Display(arrayinput)
+    {
+        document.getElementById('paragraphid').innerHTML='';   
+        for(var index=arrayinput.length-1;index>=0;index--)
+        {
+            var text=document.createTextNode(arrayinput[index])
+            var button=document.createElement('button')
+               button.textContent='X';
+               button.id=index;
+               button.value=index;
+               button.onclick=ClickHandler;
+               document.getElementById('paragraphid').append(text);
+               document.getElementById('paragraphid').append(button);
+        }
+              
+    }
+    function Display2(outputarray)
+    {
+       
+        
+        document.getElementById('paragraph2id').innerHTML='';
+        for(var index=outputarray.length-1;index>=0;index--) //iska length 1 aa raha hai 
+        {
+            var text=document.createTextNode(outputarray[index])
+              button=document.createElement('button')
+               button.textContent='X';
+               button.id=index;
+               button.value=index;
+               button.onclick=ClickHandler2;
+               document.getElementById('paragraph2id').append(text);
+               document.getElementById('paragraph2id').append(button);
+              
+        }
+        
+    }
+    function ClickHandler2(event)
+    {
+
+    }
+    function  ClickHandler(event)
+    {
+        var buttonid=event.target.id;
+        arrayinput.splice(buttonid,1);
+        Display(arrayinput);
+    }
+</script>
+ </body>
+ </html>

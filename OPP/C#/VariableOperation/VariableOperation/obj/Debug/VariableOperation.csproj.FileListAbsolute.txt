@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\VariableOperation\VariableOperation\bin\Debug\VariableOperation.exe.config
+D:\Swabhav rep\OPP\C#\VariableOperation\VariableOperation\bin\Debug\VariableOperation.exe
+D:\Swabhav rep\OPP\C#\VariableOperation\VariableOperation\bin\Debug\VariableOperation.pdb
+D:\Swabhav rep\OPP\C#\VariableOperation\VariableOperation\obj\Debug\VariableOperation.exe
+D:\Swabhav rep\OPP\C#\VariableOperation\VariableOperation\obj\Debug\VariableOperation.pdb

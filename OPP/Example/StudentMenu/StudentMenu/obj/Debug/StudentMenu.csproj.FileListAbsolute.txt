@@ -1,0 +1,6 @@
+D:\Swabhav rep\OPP\Example\StudentMenu\StudentMenu\bin\Debug\StudentMenu.exe.config
+D:\Swabhav rep\OPP\Example\StudentMenu\StudentMenu\bin\Debug\StudentMenu.exe
+D:\Swabhav rep\OPP\Example\StudentMenu\StudentMenu\bin\Debug\StudentMenu.pdb
+D:\Swabhav rep\OPP\Example\StudentMenu\StudentMenu\obj\Debug\StudentMenu.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\Example\StudentMenu\StudentMenu\obj\Debug\StudentMenu.exe
+D:\Swabhav rep\OPP\Example\StudentMenu\StudentMenu\obj\Debug\StudentMenu.pdb

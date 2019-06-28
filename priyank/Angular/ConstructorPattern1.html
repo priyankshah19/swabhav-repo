@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Constructor Example</h2>
+
+<p id="demo"></p>
+
+<script>
+
+function Customer() {
+    var _firstname,_lastname;
+    this.setFirstName=function(firstname)
+    {
+        if(firstname.length>0)
+        {
+            _firstname=firstname;
+        }
+    }
+    this.setLastName=function(lastname)
+    {
+        if(lastname.length>0)
+        {
+            _lastname=lastname;
+        }
+    }
+    this.getFullName=function()
+    {
+        return (_firstname + " " +_lastname);
+    }
+
+}
+var customer1=new Customer();
+customer1.setFirstName('priyank');
+customer1.setLastName('shah');
+console.log(customer1.getFullName());
+console.log(customer1);
+var customer2= Customer();
+customer2.setFirstName('priyank');
+customer2.setLastName('shah');
+console.log(customer2.getFullName());
+console.log(customer2);
+
+</script>
+
+</body>
+</html>

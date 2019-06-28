@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C# Concepts\GuitarTestingApp\GuitarTestingApp\bin\Debug\GuitarTestingApp.exe
+D:\Swabhav rep\OPP\C# Concepts\GuitarTestingApp\GuitarTestingApp\bin\Debug\GuitarTestingApp.pdb
+D:\Swabhav rep\OPP\C# Concepts\GuitarTestingApp\GuitarTestingApp\obj\Debug\GuitarTestingApp.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C# Concepts\GuitarTestingApp\GuitarTestingApp\obj\Debug\GuitarTestingApp.exe
+D:\Swabhav rep\OPP\C# Concepts\GuitarTestingApp\GuitarTestingApp\obj\Debug\GuitarTestingApp.pdb

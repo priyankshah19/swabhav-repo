@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+ 
+
+<body>
+
+    <select id="dynamicbutton"></select>
+
+ 
+
+    <script>
+
+       
+
+        var color = [   
+                                {
+
+                                    colorname:"Red",
+
+                                    colorvalue:"#ff8080"
+
+ 
+
+                                },
+
+                                {
+
+                                    colorname: "Orange" ,
+
+                                    colorvalue:"#ff944d"
+
+ 
+
+                                },
+
+                                {
+
+                                    colorname:"Green"  ,
+
+                                    colorvalue:"#66ff66"
+
+ 
+
+                                }
+
+                                 ]
+
+ 
+
+        var colorpick = document.querySelector("#dynamicbutton")
+
+ 
+
+         for (var i = 0; i < color.length; i++) {
+
+            var option = document.createElement('option')
+
+            option.text = color[i].colorname;
+
+            option.value = color[i].colorvalue;
+
+            colorpick.appendChild(option);
+			
+			
+
+        }
+
+ 
+
+     document.getElementById('dynamicbutton').addEventListener('change', function () {
+
+         document.body.style.backgroundColor = this.value;
+
+        });  
+
+    </script>
+
+</body>
+
+ 
+
+</html>

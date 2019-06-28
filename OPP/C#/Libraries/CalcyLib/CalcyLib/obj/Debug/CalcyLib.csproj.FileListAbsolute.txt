@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\Libraries\CalcyLib\CalcyLib\bin\Debug\CalcyLib.dll
+D:\Swabhav rep\OPP\C#\Libraries\CalcyLib\CalcyLib\bin\Debug\CalcyLib.pdb
+D:\Swabhav rep\OPP\C#\Libraries\CalcyLib\CalcyLib\obj\Debug\CalcyLib.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\Libraries\CalcyLib\CalcyLib\obj\Debug\CalcyLib.dll
+D:\Swabhav rep\OPP\C#\Libraries\CalcyLib\CalcyLib\obj\Debug\CalcyLib.pdb

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+        <body ng-app="event-app">
+                <div ng-controller='controller'>
+<button ng-click="Showimage()">Load</button>
+<img ng-hide="isHidden" ng-src="{{'spinner.jpg'}}" height='50px'>
+</div>
+</body>
+
+<script src="angular.js"> </script>
+<script>
+   
+   count=0; 
+    angular.module('event-app', [])
+        .controller('controller', function ($scope) {
+            $scope.Showimage = function () {
+                
+                $scope.isHidden=true;
+                if(count%2==0)
+                {
+                    $scope.isHidden=true;
+                    count++;
+
+                }
+                else
+                {
+                    $scope.isHidden=false;
+                    count++;
+
+                }
+            }
+        })
+</script>
+
+</html>

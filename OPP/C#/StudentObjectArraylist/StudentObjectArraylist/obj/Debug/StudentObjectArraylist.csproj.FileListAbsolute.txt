@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\StudentObjectArraylist\StudentObjectArraylist\bin\Debug\StudentObjectArraylist.exe
+D:\Swabhav rep\OPP\C#\StudentObjectArraylist\StudentObjectArraylist\bin\Debug\StudentObjectArraylist.pdb
+D:\Swabhav rep\OPP\C#\StudentObjectArraylist\StudentObjectArraylist\obj\Debug\StudentObjectArraylist.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\StudentObjectArraylist\StudentObjectArraylist\obj\Debug\StudentObjectArraylist.exe
+D:\Swabhav rep\OPP\C#\StudentObjectArraylist\StudentObjectArraylist\obj\Debug\StudentObjectArraylist.pdb

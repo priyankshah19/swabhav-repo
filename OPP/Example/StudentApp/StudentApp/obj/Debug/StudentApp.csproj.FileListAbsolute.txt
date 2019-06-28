@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\Example\StudentApp\StudentApp\obj\Debug\StudentApp.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\Example\StudentApp\StudentApp\bin\Debug\StudentApp.exe
+D:\Swabhav rep\OPP\Example\StudentApp\StudentApp\bin\Debug\StudentApp.pdb
+D:\Swabhav rep\OPP\Example\StudentApp\StudentApp\obj\Debug\StudentApp.exe
+D:\Swabhav rep\OPP\Example\StudentApp\StudentApp\obj\Debug\StudentApp.pdb

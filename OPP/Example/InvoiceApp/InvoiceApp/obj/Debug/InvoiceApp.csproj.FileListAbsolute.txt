@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\Example\InvoiceApp\InvoiceApp\bin\Debug\InvoiceApp.exe
+D:\Swabhav rep\OPP\Example\InvoiceApp\InvoiceApp\bin\Debug\InvoiceApp.pdb
+D:\Swabhav rep\OPP\Example\InvoiceApp\InvoiceApp\obj\Debug\InvoiceApp.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\Example\InvoiceApp\InvoiceApp\obj\Debug\InvoiceApp.exe
+D:\Swabhav rep\OPP\Example\InvoiceApp\InvoiceApp\obj\Debug\InvoiceApp.pdb

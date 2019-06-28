@@ -1,0 +1,4 @@
+D:\Swabhav rep\OPP\Practise program\Part2String\Part2String\bin\Debug\Part2String.exe
+D:\Swabhav rep\OPP\Practise program\Part2String\Part2String\bin\Debug\Part2String.pdb
+D:\Swabhav rep\OPP\Practise program\Part2String\Part2String\obj\Debug\Part2String.exe
+D:\Swabhav rep\OPP\Practise program\Part2String\Part2String\obj\Debug\Part2String.pdb

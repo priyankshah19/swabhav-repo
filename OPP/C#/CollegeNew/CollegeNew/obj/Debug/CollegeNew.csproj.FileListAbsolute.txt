@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\CollegeNew\CollegeNew\bin\Debug\CollegeNew.exe
+D:\Swabhav rep\OPP\C#\CollegeNew\CollegeNew\bin\Debug\CollegeNew.pdb
+D:\Swabhav rep\OPP\C#\CollegeNew\CollegeNew\obj\Debug\CollegeNew.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\CollegeNew\CollegeNew\obj\Debug\CollegeNew.exe
+D:\Swabhav rep\OPP\C#\CollegeNew\CollegeNew\obj\Debug\CollegeNew.pdb

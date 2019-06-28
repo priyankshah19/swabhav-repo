@@ -1,0 +1,69 @@
+<html>
+
+<body ng-app="numberapi-app">
+    <div ng-controller="controller">
+        <label for="number">Get Facts</label>
+        <input type="number" id="fact" ng-model='getnumber'>
+        <br>
+        <input type="button" id="search" value="Search" ng-click="Search()">
+        <img ng-hide="isHidden" ng-src="{{'spinner.jpg'}}" height='50px'>
+        <p>{{result}} </p>
+    </div>
+
+</body>
+<script src="angular.js"></script>
+<script>
+    var app = angular.module('numberapi-app', [])
+    app.factory('numberapiservice', ['$log', '$http', '$q', '$rootScope', '$timeout', function ($log, $http, $q, $rootScope, $timeout) {
+        var object = {};
+        var result;
+        $rootScope.isHidden = true;
+        object.getfact = function (no) {
+            console.log(no);
+
+
+            return $q(function (resolve, reject) {
+                $rootScope.isHidden = false;
+                $timeout(function () {
+                    $http({
+                        method: 'Get',
+                        url: "http://numbersapi.com/" + no
+                    }).then(function success(response) {
+                        result = response.data;
+                        resolve(result)
+                        console.log(response.data);
+                        
+
+                    }), function myError(response) {
+                        result = response.statusText
+                        reject(result)
+                    }
+                    $rootScope.isHidden = true;
+                }, 3000)
+               
+            })
+
+
+           
+
+        }
+        return object
+
+    }])
+
+    app.controller('controller', ['$scope', 'numberapiservice', function ($scope, numberapiservice) {
+        $scope.Search = function () {
+            numberapiservice.getfact($scope.getnumber).then(function (result) {
+
+                $scope.result = result;
+            })
+
+
+        }
+
+
+    }])
+
+</script>
+
+</html>

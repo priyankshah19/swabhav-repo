@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\Example\CodeMagnet6\CodeMagnet6\obj\Debug\CodeMagnet6.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\Example\CodeMagnet6\CodeMagnet6\bin\Debug\CodeMagnet6.exe
+D:\Swabhav rep\OPP\Example\CodeMagnet6\CodeMagnet6\bin\Debug\CodeMagnet6.pdb
+D:\Swabhav rep\OPP\Example\CodeMagnet6\CodeMagnet6\obj\Debug\CodeMagnet6.exe
+D:\Swabhav rep\OPP\Example\CodeMagnet6\CodeMagnet6\obj\Debug\CodeMagnet6.pdb

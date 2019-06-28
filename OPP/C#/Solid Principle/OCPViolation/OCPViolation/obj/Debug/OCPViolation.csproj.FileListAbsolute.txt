@@ -1,0 +1,6 @@
+D:\Swabhav rep\OPP\C#\Solid Principle\OCPViolation\OCPViolation\bin\Debug\OCPViolation.exe.config
+D:\Swabhav rep\OPP\C#\Solid Principle\OCPViolation\OCPViolation\obj\Debug\OCPViolation.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\Solid Principle\OCPViolation\OCPViolation\bin\Debug\OCPViolation.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\OCPViolation\OCPViolation\bin\Debug\OCPViolation.pdb
+D:\Swabhav rep\OPP\C#\Solid Principle\OCPViolation\OCPViolation\obj\Debug\OCPViolation.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\OCPViolation\OCPViolation\obj\Debug\OCPViolation.pdb

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+    <script>
+        
+        AsyncCubeEvennumber(2).then(function (result)
+        {
+            console.log(result)
+            return (AsyncCubeEvennumber(result))
+        }).then(function (result1)
+        {
+            console.log(result1);
+        }).catch(function(error)
+        {
+            console.log(error);
+        })
+        //console.log(CubeEvennumber(4));
+        console.log("end of script");
+        function AsyncCubeEvennumber(number)
+        {
+            return new Promise(function (resolve,reject)
+            {
+                if(number%2==0)
+                resolve (number*number*number);
+        
+            else
+                reject("Error");
+            })
+            
+            
+        }
+        var second=function AsyncCubeEvennumber(result)
+        {
+            return new Promise(function (resolve,reject)
+            {
+                if(result%2==0)
+                resolve (result*result*result);
+        
+            else
+                reject("Error");
+            })
+            
+            
+        }
+    </script>
+ </html>

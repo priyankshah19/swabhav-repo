@@ -1,0 +1,6 @@
+D:\Swabhav rep\OPP\C#\Solid Principle\LSVViolation\LSVViolation\bin\Debug\LSVViolation.exe.config
+D:\Swabhav rep\OPP\C#\Solid Principle\LSVViolation\LSVViolation\bin\Debug\LSVViolation.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\LSVViolation\LSVViolation\bin\Debug\LSVViolation.pdb
+D:\Swabhav rep\OPP\C#\Solid Principle\LSVViolation\LSVViolation\obj\Debug\LSVViolation.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\Solid Principle\LSVViolation\LSVViolation\obj\Debug\LSVViolation.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\LSVViolation\LSVViolation\obj\Debug\LSVViolation.pdb

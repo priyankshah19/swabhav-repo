@@ -10,12 +10,12 @@ namespace FactoryMethodLib
     {
         public void Start()
         {
-            Console.WriteLine("Audi started");
+            Console.WriteLine("BMW started");
         }
 
         public void Stop()
         {
-            Console.WriteLine("Audi stop");
+            Console.WriteLine("BMW stop");
         }
     }
 }

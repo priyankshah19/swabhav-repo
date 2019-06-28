@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Protype Example</h2>
+
+<p id="demo"></p>
+
+<script>
+
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  
+}
+Person.prototype.getDetails=function() {
+    return ("Firstname is " +this.firstName+ "LastName is " +this.lastName);
+}
+var myFather = new Person("John", "Doe", 50, "blue");
+console.log(myFather.__proto__===Person.prototype);
+console.log(myFather.getDetails());
+var myMother = new Person("Sally", "Rally", 48, "green");
+console.log(myMother.__proto__===myFather.__proto__);
+console.log(myFather);
+console.log(myMother);
+console.log(myMother.getDetails());
+
+</script>
+
+</body>
+</html>

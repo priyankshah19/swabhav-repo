@@ -1,0 +1,8 @@
+D:\Swabhav rep\OPP\C#\Design Pattern\FactoryMethodSolution\FactoryMethodClient\bin\Debug\FactoryMethodClient.exe.config
+D:\Swabhav rep\OPP\C#\Design Pattern\FactoryMethodSolution\FactoryMethodClient\bin\Debug\FactoryMethodClient.exe
+D:\Swabhav rep\OPP\C#\Design Pattern\FactoryMethodSolution\FactoryMethodClient\bin\Debug\FactoryMethodClient.pdb
+D:\Swabhav rep\OPP\C#\Design Pattern\FactoryMethodSolution\FactoryMethodClient\bin\Debug\FactoryMethodLib.dll
+D:\Swabhav rep\OPP\C#\Design Pattern\FactoryMethodSolution\FactoryMethodClient\bin\Debug\FactoryMethodLib.pdb
+D:\Swabhav rep\OPP\C#\Design Pattern\FactoryMethodSolution\FactoryMethodClient\obj\Debug\FactoryMethodClient.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\Design Pattern\FactoryMethodSolution\FactoryMethodClient\obj\Debug\FactoryMethodClient.exe
+D:\Swabhav rep\OPP\C#\Design Pattern\FactoryMethodSolution\FactoryMethodClient\obj\Debug\FactoryMethodClient.pdb

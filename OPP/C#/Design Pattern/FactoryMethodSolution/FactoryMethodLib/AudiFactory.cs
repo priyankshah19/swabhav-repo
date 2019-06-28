@@ -8,7 +8,7 @@ using FactoryMethodLib;
 namespace FactoryMethodLib
 {
     
-    class AudiFactory : IAutomobileFactory
+  public  class AudiFactory : IAutomobileFactory
     {
         private static AudiFactory _container;
         public AudiFactory()

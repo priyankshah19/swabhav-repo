@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script src="jquery-3.3.1.js"></script>
+<script>
+    $(document).ready(function()
+    {
+      $('#div').css(
+        {"border-color": "#C1E0FF", 
+             "border-weight":"1px", 
+             "border-style":"solid",
+             "color":"red",
+             "width":"100px",
+             "font-size":"20px"}
+        );
+        $('#div').click(function()
+        {
+            alert("clicked me");
+        }
+        );
+        $('#div').text("Hello world");
+        
+    });
+</script>
+<body>
+<div id="div"></div>
+</body>
+</html>

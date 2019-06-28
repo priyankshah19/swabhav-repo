@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\InheritancApp\InheritancApp\bin\Debug\InheritancApp.exe
+D:\Swabhav rep\OPP\C#\InheritancApp\InheritancApp\bin\Debug\InheritancApp.pdb
+D:\Swabhav rep\OPP\C#\InheritancApp\InheritancApp\obj\Debug\InheritancApp.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\InheritancApp\InheritancApp\obj\Debug\InheritancApp.exe
+D:\Swabhav rep\OPP\C#\InheritancApp\InheritancApp\obj\Debug\InheritancApp.pdb

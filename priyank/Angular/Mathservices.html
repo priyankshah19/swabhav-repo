@@ -1,0 +1,78 @@
+<html>
+
+<body ng-app="mathservices-app">
+    <div ng-controller='Primeno'>
+        <input type="number" id="fact" ng-model='getnumber'>
+        <input type="button" id="search" value="Get Primeno" ng-click="GetPrimeno()">
+        <img ng-hide="isHidden" ng-src="{{'spinner.jpg'}}" height='50px'>
+        <p ng-repeat="number in result">
+                {{number}}
+            </p>
+    </div>
+    <div ng-controller='Evenno'>
+        <input type="number" id="fact" ng-model='getnumber'>
+        <input type="button" id="search" value="Get Even no" ng-click="GetNumber()">
+      
+        <p ng-repeat="number in result">
+            {{number}}
+        </p>
+    </div>
+
+</body>
+
+<script src="angular.js"></script>
+<script>
+    var app = angular.module('mathservices-app', [])
+    app.factory('mathservice',['$log', function ($log) {
+        $log.log('inside services')
+       
+        var object = {}
+        object.getprimenumber = function (no) {
+           
+            primeno = [];
+            for (i = 2; i <= no; i++) {
+                var c = 0;
+                for (j = 1; j <= i; j++) {
+                    if (i % j == 0) {
+                        c++;
+                    }
+                }
+
+                if (c == 2) {
+                   primeno.push(i);
+                }
+            }
+            return primeno;
+
+        }
+        object.getevennumber = function (no) {
+            console.log(no);
+            evenno = [];
+            for (var i = 1; i <= no; i++) {
+                if (i % 2 == 0) {
+                    evenno.push(i);
+                }
+            }
+            return evenno;
+        }
+        return object;
+    }])
+    app.controller('Evenno',['$scope','mathservice', function ($scope, mathservice) {
+        $scope.GetNumber = function () {
+
+
+            $scope.result = mathservice.getevennumber($scope.getnumber)
+            console.log($scope.result);
+        }
+
+    }])
+    app.controller('Primeno', ['$scope','mathservice',function ($scope, mathservice) {
+        $scope.GetPrimeno = function () {
+    
+            $scope.result = mathservice.getprimenumber($scope.getnumber)
+        }
+
+    }])
+</script>
+
+</html>

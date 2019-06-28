@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+
+<body bgcolor="#ffff66" ng-app="BlueBallGame-app">
+    <div ng-controller='GameController'>
+        <h1 ng-hide="isHidden">Number Guessing Game</h1>
+        <p id="pid" ng-hide="isHidden">
+            Game Description:<br>
+            1-) You have to choose number from 1 to 50 <br>
+            2-) If you click on number greater than Random Number than it will become red.<br>
+            3-) If you click on number less than Random Number than it will become blue.<br>
+            4-) If you click on correct number than it will become green.<br>
+            5-) You have 10 chance to choose correct number and win these game.<br>
+        </p><br><br>
+        <input type="button" id="start" value="Start" ng-click="StartGame()" ng-hide="isHidden">
+        <p ng-hide="gamechance">Chances left {{count}}</p>
+        <p ng-hide="gamestatus">Status {{status}}</p>
+        
+        <button ng-hide="gamestatus" class="button" ng-repeat="value in Addbutton(numberofbutton) track by $index+1"
+            ng-click="getIndex($event)" ng-style="btncolor{{$index+1}}" id="{{$index+1}}">{{$index+1}}</button>
+        <br><br><br>
+
+    </div>
+    <div ng-controller='GameController' ng-show="isshow">HELLO
+
+
+    </div>
+    <style>
+        .button {
+            width: 80px;
+            height: 80px;
+            line-height: 50px;
+            border: 1px solid;
+            border-radius: 50%;
+            text-align: center;
+            margin: 10px;
+            background: #dfd3d3;
+            font-size: 20px;
+            font-weight: bold;
+            float: left;
+            background: gray;
+        }
+    </style>
+
+</body>
+<script src="angular.js"> </script>
+<script>
+
+    angular.module('BlueBallGame-app', [])
+        .controller('GameController', function ($scope, $parse,$window,$timeout) {
+
+
+            $scope.StartGame = function () {
+                $scope.iswinner=true;
+                $scope.gamestatus = false;
+                $scope.gamechance=false;
+                $scope.randomnumber = Math.floor((Math.random() * 50) + 1);
+                $scope.count = 10;
+                console.log($scope.randomnumber);
+                $scope.isHidden = true;
+                $scope.numberofbutton = 50;
+                $scope.Addbutton = function (x) {
+                    return new Array(x);
+                }
+                $scope.getIndex = function (buttonvalue) {
+                    $scope.count--;
+                    $scope.button = buttonvalue;
+                    var btnid = buttonvalue.target.id;
+                    var btnstring = "btncolor" + btnid;
+                    var change = $parse(btnstring)
+                    if ($scope.count < 0) {
+                        $scope.status = 'Game over'
+                        $scope.gamechance=true;
+                        $scope.gamestatus = true;
+
+                       $timeout(function()
+                    {
+                           $window.location.reload();
+                     },3000)
+                       
+                    }
+                    else {
+
+                        if (btnid > $scope.randomnumber) {
+                            $scope.status = 'Continue'
+                            buttonvalue.target.disabled = true;
+                            change.assign($scope, {
+                                "background": 'red',
+
+                            })
+
+                        }
+                        if (btnid < $scope.randomnumber) {
+                            $scope.status = 'Continue'
+                            buttonvalue.target.disabled = true;
+                            change.assign($scope, {
+                                "background": 'green'
+                            })
+                        }
+                        if (btnid == $scope.randomnumber) {
+                            $scope.status = 'You Won'
+                            buttonvalue.target.disabled = true;
+                            change.assign($scope, {
+                                "background": 'blue'
+                            })
+                           // $scope.iswinner=false;
+                            $timeout(function()
+                    {
+                           $window.location.reload();
+                     },3000)
+                        
+                        }
+                        console.log($scope.button);
+
+                    }
+
+                }
+
+
+
+            }
+        })
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+    <div id="text">
+        <h1>Ajax Demo</h1>
+            <input type="text" id="number">
+            <img src="spinner.jpg" height="20" id="image" />
+            <input  type="button" id="search"  value="Search">
+            <input  type="button" id="changecolor" value="ChangeColor">
+
+    </div>
+
+<div id='div'>
+      
+<p id=pid></p>
+</div>
+</body>
+<script src="jquery-3.3.1.js"></script>
+<script>
+    var delay=5000;
+    $(document).ready(function()
+    {
+        $("#image").hide();
+        $(document).ajaxStart(function () {
+        $("#image").show();
+    }).ajaxStop(function () {
+        $("#image").hide();
+    }); 
+    
+        $('#search').click(function()
+        {
+           
+            $.ajax({url:"http://www.numbersapi.com/"+$('#number').val(), dataType: "jsonp",success:function(result)
+            {
+
+               /* setTimeout(function() {
+                    $('#div').html(result);
+               }, delay); */
+             
+               $('#div').html(result);
+               console.log(result);
+            }
+            })
+        })
+        $('#changecolor').click(function()
+        {
+             $('#text').css("background-color","yellow");
+        })
+      console.log('end');
+    })
+</script>
+</html>

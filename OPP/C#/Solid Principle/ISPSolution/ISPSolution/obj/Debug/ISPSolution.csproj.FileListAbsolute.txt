@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\Solid Principle\ISPSolution\ISPSolution\bin\Debug\ISPSolution.exe.config
+D:\Swabhav rep\OPP\C#\Solid Principle\ISPSolution\ISPSolution\bin\Debug\ISPSolution.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\ISPSolution\ISPSolution\bin\Debug\ISPSolution.pdb
+D:\Swabhav rep\OPP\C#\Solid Principle\ISPSolution\ISPSolution\obj\Debug\ISPSolution.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\ISPSolution\ISPSolution\obj\Debug\ISPSolution.pdb

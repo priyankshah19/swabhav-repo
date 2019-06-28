@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<body bgcolor="#ffff66">
+    <h1>Number Guessing Game</h1>
+    Game Description:<p id="pid">1-) You have to choose number from 1 to 50 <br>
+       2-) If you click on number greater than Random Number than it will become red.<br>
+       3-) If you click on number less than Random Number than it will become blue.<br>
+       4-) If you click on correct number than it will become green.<br>
+       5-) You have 10 chance to choose correct number and win these game.<br>
+     </p><br><br>
+     <input  type="button" id="start"  value="Start" onclick="StartGame()">
+     <p id="pid2"></p>
+     Game Status:<p id="pid3"></p>
+
+     </p>
+     <script>
+         var button;
+         var randomnumber;
+         
+       
+         function StartGame()
+         {
+             document.getElementById('start').setAttribute("disabled",true);
+           //  document.getElementById('reset').setAttribute("disabled",true);
+             Addbutton();
+         }
+         function Addbutton()
+         {
+             count=0;
+             buttonlimit=100;
+             randomnumber=Math.floor((Math.random()*100)+1);
+             console.log(randomnumber);
+             document.getElementById('pid').style.visibility="hidden";
+             document.getElementById('pid2').innerHTML='';
+            for (var index =1;index<=buttonlimit;index++) {
+                button = document.createElement('button')
+                button.index=index;
+                button.textContent =index;
+                button.id = index;
+                button.style.backgroundColor='#FFFFFF';
+                button.style.width='50px';
+                button.style.height='50px';
+                button.value = index+10;
+                button.onclick=(function(){
+                    var text=this.textContent;
+                    count++;
+                if(count>10)
+                {
+                    document.getElementById('pid3').innerHTML="You Loose";
+                    document.getElementById('pid2').innerHTML.disabled="true";
+                    document.getElementById('start').removeAttribute("disabled");
+                    document.getElementById('pid').style.visibility="visible";
+             //       document.getElementById('reset').disabled="false";
+                }
+                else
+               {
+                if(text>randomnumber)
+                    {
+                        this.style.backgroundColor='#ff0000';
+                        document.getElementById('pid3').innerHTML="Continue Playing"+"<br>"+"Turn Count: "+count;
+                    }
+                    else if(text<randomnumber)
+                    {
+                        this.style.backgroundColor='#0099ff'
+                        document.getElementById('pid3').innerHTML="Continue Playing"+"<br>"+"Turn Count: "+count;
+                    }
+                    else if(text==randomnumber)
+                    {
+                        this.style.backgroundColor='#00ff00'
+                        document.getElementById('pid3').innerHTML="You Won";
+                        document.getElementById('start').removeAttribute("disabled");
+                       //document.getElementById('reset').disabled="false";
+                       document.getElementById('pid').style.visibility="visible";
+                    } 
+               }             
+                });
+              //  button.onclick =ClickHandler;
+                document.getElementById('pid2').append(button);
+            }
+         }
+         function ClickHandler(event)
+         {
+             var index=event.target.button;
+            // var buttonid=event.target.id;
+             index.style.backgroundColor='#ffff66';
+            
+         }
+     </script>
+
+
+
+</body>
+</html>

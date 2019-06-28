@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\Practise program\Part2\Part2\obj\Debug\Part2.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\Practise program\Part2\Part2\bin\Debug\Part2.exe
+D:\Swabhav rep\OPP\Practise program\Part2\Part2\bin\Debug\Part2.pdb
+D:\Swabhav rep\OPP\Practise program\Part2\Part2\obj\Debug\Part2.exe
+D:\Swabhav rep\OPP\Practise program\Part2\Part2\obj\Debug\Part2.pdb

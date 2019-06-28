@@ -1,0 +1,6 @@
+D:\Swabhav rep\OPP\C#\Solid Principle\ISPViolation\ISPViolation\bin\Debug\ISPViolation.exe.config
+D:\Swabhav rep\OPP\C#\Solid Principle\ISPViolation\ISPViolation\bin\Debug\ISPViolation.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\ISPViolation\ISPViolation\bin\Debug\ISPViolation.pdb
+D:\Swabhav rep\OPP\C#\Solid Principle\ISPViolation\ISPViolation\obj\Debug\ISPViolation.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\Solid Principle\ISPViolation\ISPViolation\obj\Debug\ISPViolation.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\ISPViolation\ISPViolation\obj\Debug\ISPViolation.pdb

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<h1>ON CLick Page </h1>
+<input type="button" onclick="GetMouseLoaction(event)" id="mybutton" name="mouseLocation" value="Click me"></input>
+<script>
+ function GetMouseLoaction(event)
+{
+    var x = event.clientX;
+  var y = event.clientY;
+  var buttonvalue=event.target.value;
+ //  var button = document.getElementById("mybutton").value;
+  var coords = "X coords: " + x + ", Y coords: " + y;
+  console.log(coords);
+   console.log(buttonvalue);
+  
+}
+</script>
+</body>
+</html>

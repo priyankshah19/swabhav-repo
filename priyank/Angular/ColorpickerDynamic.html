@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body ng-app="colorapp" ng-style="bgcolor">
+    <div ng-controller="colorcontroller" >
+            <select ng-model="selectedcolor" ng-options="option.name as option.name for option in color" ng-change="pickcolor()">
+                    <option value="">Select a type</option>    
+                  </select>
+                  <p>
+                        {{selectedItem.name}}
+                    </p> 
+                 
+    </div>
+    <script src="angular.js"></script>
+    <script>
+        angular.module('colorapp', []).controller('colorcontroller',['$rootScope','$scope', function ($rootScope, $scope) {
+            
+            $scope.color=[{name:"red"},{name:"green"},{name:"yellow"}]
+            $scope.selectedcolor = 'red';
+            $scope.pickcolor = function () {
+                $rootScope.bgcolor = {
+                    "background-color": $scope.selectedcolor
+                }
+            }
+        }])
+
+    </script>
+
+</body>
+</html>

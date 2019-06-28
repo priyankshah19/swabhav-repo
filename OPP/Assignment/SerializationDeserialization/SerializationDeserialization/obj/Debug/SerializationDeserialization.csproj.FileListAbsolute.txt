@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\Assignment\SerializationDeserialization\SerializationDeserialization\bin\Debug\SerializationDeserialization.exe
+D:\Swabhav rep\OPP\Assignment\SerializationDeserialization\SerializationDeserialization\bin\Debug\SerializationDeserialization.pdb
+D:\Swabhav rep\OPP\Assignment\SerializationDeserialization\SerializationDeserialization\obj\Debug\SerializationDeserialization.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\Assignment\SerializationDeserialization\SerializationDeserialization\obj\Debug\SerializationDeserialization.exe
+D:\Swabhav rep\OPP\Assignment\SerializationDeserialization\SerializationDeserialization\obj\Debug\SerializationDeserialization.pdb

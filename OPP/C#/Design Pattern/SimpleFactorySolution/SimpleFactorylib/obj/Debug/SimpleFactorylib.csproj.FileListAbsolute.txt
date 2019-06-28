@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\Design Pattern\SimpleFactorySolution\SimpleFactorylib\bin\Debug\SimpleFactorylib.dll
+D:\Swabhav rep\OPP\C#\Design Pattern\SimpleFactorySolution\SimpleFactorylib\bin\Debug\SimpleFactorylib.pdb
+D:\Swabhav rep\OPP\C#\Design Pattern\SimpleFactorySolution\SimpleFactorylib\obj\Debug\SimpleFactorylib.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\Design Pattern\SimpleFactorySolution\SimpleFactorylib\obj\Debug\SimpleFactorylib.dll
+D:\Swabhav rep\OPP\C#\Design Pattern\SimpleFactorySolution\SimpleFactorylib\obj\Debug\SimpleFactorylib.pdb

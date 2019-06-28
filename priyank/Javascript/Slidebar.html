@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="range" min="1" max="100" value="10" id="myrange">
+    <p>Value: <span id="pid"></span></p>
+    <p>You Have Clicked on: <span id="cid"></span></p>
+    <script>
+        var slider=document.getElementById("myrange");
+        var output=document.getElementById("pid");
+        output.innerHTML=slider.value;
+        slider.oninput=function(event)
+        {
+            output.innerHTML=this.value;
+            var NoOfButton=this.value;
+            var getbuttonid= document.querySelector("#pid")
+            for(var index=1;index<=NoOfButton;index++)
+            {
+               var button=document.createElement('button')
+               button.text=this.value;
+               button.id=index;
+               button.innerHTML=index;
+               button.onclick=clickHandler;
+                getbuttonid.appendChild(button);
+            }
+            function clickHandler(event)
+            {
+              var text=event.target.textContent;
+              var para=document.getElementById("cid");
+              para.innerHTML=text;
+
+            }
+           
+        }
+        
+    </script>
+</body>
+</html>

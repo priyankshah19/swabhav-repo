@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\Example\ParameterPassingApp\ParameterPassingApp\bin\Debug\ParameterPassingApp.exe
+D:\Swabhav rep\OPP\Example\ParameterPassingApp\ParameterPassingApp\bin\Debug\ParameterPassingApp.pdb
+D:\Swabhav rep\OPP\Example\ParameterPassingApp\ParameterPassingApp\obj\Debug\ParameterPassingApp.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\Example\ParameterPassingApp\ParameterPassingApp\obj\Debug\ParameterPassingApp.exe
+D:\Swabhav rep\OPP\Example\ParameterPassingApp\ParameterPassingApp\obj\Debug\ParameterPassingApp.pdb

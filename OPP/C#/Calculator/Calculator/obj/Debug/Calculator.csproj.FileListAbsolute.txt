@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\Calculator\Calculator\bin\Debug\Calculator.exe
+D:\Swabhav rep\OPP\C#\Calculator\Calculator\bin\Debug\Calculator.pdb
+D:\Swabhav rep\OPP\C#\Calculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\Calculator\Calculator\obj\Debug\Calculator.exe
+D:\Swabhav rep\OPP\C#\Calculator\Calculator\obj\Debug\Calculator.pdb

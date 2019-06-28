@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <bod>
+        <p>Details:<span id="pid"></span></p>
+        <script>
+            var value=["priyank","Meet","Ratnesh"]
+            localStorage.setItem("key",JSON.stringify(value));
+            text=localStorage.getItem("StudentName");
+            var output=JSON.parse(text);
+            document.getElementById("pid").innerHTML=output;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\InheritanceWithConstructor\InheritanceWithConstructor\bin\Debug\InheritanceWithConstructor.exe
+D:\Swabhav rep\OPP\C#\InheritanceWithConstructor\InheritanceWithConstructor\bin\Debug\InheritanceWithConstructor.pdb
+D:\Swabhav rep\OPP\C#\InheritanceWithConstructor\InheritanceWithConstructor\obj\Debug\InheritanceWithConstructor.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\InheritanceWithConstructor\InheritanceWithConstructor\obj\Debug\InheritanceWithConstructor.exe
+D:\Swabhav rep\OPP\C#\InheritanceWithConstructor\InheritanceWithConstructor\obj\Debug\InheritanceWithConstructor.pdb

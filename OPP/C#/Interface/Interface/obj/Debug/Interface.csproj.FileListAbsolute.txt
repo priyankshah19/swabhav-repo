@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\Interface\Interface\bin\Debug\Interface.exe
+D:\Swabhav rep\OPP\C#\Interface\Interface\bin\Debug\Interface.pdb
+D:\Swabhav rep\OPP\C#\Interface\Interface\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\Interface\Interface\obj\Debug\Interface.exe
+D:\Swabhav rep\OPP\C#\Interface\Interface\obj\Debug\Interface.pdb

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<body ng-app="event-app">
+    <div ng-controller='controller'>
+        <button ng-click="myFunc()">Load</button>
+        <p>
+        
+            <ul>
+                    <li ng-repeat="students in students">Id: {{students.id}} Name:{{students.name}} 
+                          Image:  <img ng-src="{{students.image}}" height='100px' >
+                          <p ng-style="{'background':'{{students.cgpa |colorfilter}}'}">cgpa:{{students.cgpa }} </p>
+                    </li>
+                  </ul>
+            
+        </p>
+        
+            
+      
+
+    </div>
+
+</body>
+<script src="angular.js"> </script>
+<script src>
+     app.filter('colorfilter',function(){
+            return function(cgpa)
+            {
+                if(cgpa<6.0)
+                {
+                  return "red"
+                }
+                else if(cgpa>8.0 && cgpa<9.0)
+                {
+                    return "yellow"
+                }
+                else{
+                    return "green"
+                }
+
+            }
+        })
+
+</script>
+
+</html>

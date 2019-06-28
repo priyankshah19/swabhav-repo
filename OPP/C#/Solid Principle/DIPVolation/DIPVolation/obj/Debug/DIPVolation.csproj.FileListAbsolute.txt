@@ -1,0 +1,6 @@
+D:\Swabhav rep\OPP\C#\Solid Principle\DIPVolation\DIPVolation\bin\Debug\DIPVolation.exe.config
+D:\Swabhav rep\OPP\C#\Solid Principle\DIPVolation\DIPVolation\bin\Debug\DIPVolation.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\DIPVolation\DIPVolation\bin\Debug\DIPVolation.pdb
+D:\Swabhav rep\OPP\C#\Solid Principle\DIPVolation\DIPVolation\obj\Debug\DIPVolation.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\Solid Principle\DIPVolation\DIPVolation\obj\Debug\DIPVolation.exe
+D:\Swabhav rep\OPP\C#\Solid Principle\DIPVolation\DIPVolation\obj\Debug\DIPVolation.pdb

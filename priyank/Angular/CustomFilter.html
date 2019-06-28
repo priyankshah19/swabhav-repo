@@ -1,0 +1,23 @@
+<html>
+    <body ng-app="customfilter-app">
+        <div ng-controller="controller">
+         <p>
+             {{text|Demofilter}}
+         </p>
+        </div>
+    </body>
+    <script src="angular.js"></script>
+    <script>
+       var app= angular.module('customfilter-app',[])
+        app.controller('controller',function($scope)
+        {
+             $scope.text="Hello"
+        })
+        app.filter('Demofilter',function(){
+            return function(input)
+            {
+                return input +"World"
+            }
+        })
+    </script>
+</html>

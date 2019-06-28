@@ -1,0 +1,8 @@
+D:\Swabhav rep\OPP\C#\CalculatorUsingLibrary\CalculatorUsingLibrary\bin\Debug\CalculatorUsingLibrary.exe.config
+D:\Swabhav rep\OPP\C#\CalculatorUsingLibrary\CalculatorUsingLibrary\bin\Debug\CalculatorUsingLibrary.exe
+D:\Swabhav rep\OPP\C#\CalculatorUsingLibrary\CalculatorUsingLibrary\bin\Debug\CalculatorUsingLibrary.pdb
+D:\Swabhav rep\OPP\C#\CalculatorUsingLibrary\CalculatorUsingLibrary\bin\Debug\CalcyLib.dll
+D:\Swabhav rep\OPP\C#\CalculatorUsingLibrary\CalculatorUsingLibrary\bin\Debug\CalcyLib.pdb
+D:\Swabhav rep\OPP\C#\CalculatorUsingLibrary\CalculatorUsingLibrary\obj\Debug\CalculatorUsingLibrary.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\CalculatorUsingLibrary\CalculatorUsingLibrary\obj\Debug\CalculatorUsingLibrary.exe
+D:\Swabhav rep\OPP\C#\CalculatorUsingLibrary\CalculatorUsingLibrary\obj\Debug\CalculatorUsingLibrary.pdb

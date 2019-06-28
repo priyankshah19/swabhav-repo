@@ -1,0 +1,8 @@
+D:\Swabhav rep\OPP\Assignment\ResumeApplication\ResumeApplication\bin\Debug\ResumeApplication.exe
+D:\Swabhav rep\OPP\Assignment\ResumeApplication\ResumeApplication\bin\Debug\ResumeApplication.pdb
+D:\Swabhav rep\OPP\Assignment\ResumeApplication\ResumeApplication\obj\Debug\ResumeApplication.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\Assignment\ResumeApplication\ResumeApplication\obj\Debug\ResumeApplication.Form1.resources
+D:\Swabhav rep\OPP\Assignment\ResumeApplication\ResumeApplication\obj\Debug\ResumeApplication.Properties.Resources.resources
+D:\Swabhav rep\OPP\Assignment\ResumeApplication\ResumeApplication\obj\Debug\ResumeApplication.csproj.GenerateResource.Cache
+D:\Swabhav rep\OPP\Assignment\ResumeApplication\ResumeApplication\obj\Debug\ResumeApplication.exe
+D:\Swabhav rep\OPP\Assignment\ResumeApplication\ResumeApplication\obj\Debug\ResumeApplication.pdb

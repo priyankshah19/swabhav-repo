@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C# Concepts\PlayerApp\PlayerApp\bin\Debug\PlayerApp.exe
+D:\Swabhav rep\OPP\C# Concepts\PlayerApp\PlayerApp\bin\Debug\PlayerApp.pdb
+D:\Swabhav rep\OPP\C# Concepts\PlayerApp\PlayerApp\obj\Debug\PlayerApp.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C# Concepts\PlayerApp\PlayerApp\obj\Debug\PlayerApp.exe
+D:\Swabhav rep\OPP\C# Concepts\PlayerApp\PlayerApp\obj\Debug\PlayerApp.pdb

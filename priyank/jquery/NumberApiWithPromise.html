@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<input type="text" id="number">
+<img src="spinner.jpg" height="20" id="image" />
+<input type="button" id="search" value="Search">
+<script src="jquery-3.3.1.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        $("#image").hide();
+        $(document).ajaxStart(function () {
+            $("#image").show();
+        }).ajaxStop(function () {
+            $("#image").hide();
+        });
+
+        $('#search').click(function () {
+            number = $('#number').val();
+            GetFacts(number).then(function (results) {
+                console.log(results);
+            }).catch(function(error)
+        {
+            console.log(error);
+        })
+
+            function GetFacts(number) {
+                return new Promise(function (resolve, reject) {
+                    $.ajax({
+                        url: "http://www.numbersapi.com/" + number, dataType: "jsonp", success: function (result, status) {
+
+                            resolve(result);
+                        }
+                        , error: function (error) {
+                            reject(error);
+                        }
+                    })
+                 } )                                                                                                                           
+            }
+
+
+        })
+
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\ContactList\ContactList\obj\Debug\ContactList.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\ContactList\ContactList\bin\Debug\ContactList.exe
+D:\Swabhav rep\OPP\C#\ContactList\ContactList\bin\Debug\ContactList.pdb
+D:\Swabhav rep\OPP\C#\ContactList\ContactList\obj\Debug\ContactList.exe
+D:\Swabhav rep\OPP\C#\ContactList\ContactList\obj\Debug\ContactList.pdb

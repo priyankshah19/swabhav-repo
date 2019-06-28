@@ -1,0 +1,5 @@
+D:\Swabhav rep\OPP\C#\FindGuiatrTester\FindGuiatrTester\obj\Debug\FindGuiatrTester.csprojResolveAssemblyReference.cache
+D:\Swabhav rep\OPP\C#\FindGuiatrTester\FindGuiatrTester\bin\Debug\FindGuiatrTester.exe
+D:\Swabhav rep\OPP\C#\FindGuiatrTester\FindGuiatrTester\bin\Debug\FindGuiatrTester.pdb
+D:\Swabhav rep\OPP\C#\FindGuiatrTester\FindGuiatrTester\obj\Debug\FindGuiatrTester.exe
+D:\Swabhav rep\OPP\C#\FindGuiatrTester\FindGuiatrTester\obj\Debug\FindGuiatrTester.pdb

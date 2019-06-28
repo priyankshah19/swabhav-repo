@@ -1,0 +1,30 @@
+<hmtl>
+
+    <body ng-app='singlepageapp'>
+        <a href="#!/welcome">welcome</a>
+        <a href="#!/event">event</a>
+        <a href="#!/collection">collection</a>
+
+        <div ng-view></div>
+    </body>
+
+    <script src="angular.js"> </script>
+    <script src="angular-route.js"></script>
+    <script>
+        var app = angular.module("singlepageapp", ["ngRoute"]);
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/welcome", {
+                    templateUrl: "welcome.html"
+                })
+                .when("/event", {
+                    templateUrl: "event.html"
+                })
+                .when("/collection", {
+                    templateUrl: "collection.htm1"
+                })
+                
+        });
+    </script>
+
+</hmtl>
