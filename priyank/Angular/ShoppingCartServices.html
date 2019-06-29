@@ -1,0 +1,199 @@
+<html>
+<link rel="stylesheet" href="bootstrap-3.4.1-dist\bootstrap-3.4.1-dist\css\bootstrap.css">
+<style>
+    table,
+    td,
+    th {
+        border: 1px solid black;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th {
+
+        text-align: center;
+    }
+
+    tr {
+        text-align: center;
+    }
+</style>
+
+<body ng-app="shoppingcart-app">
+    <div ng-controller='cartController'>
+        <div>
+            <select id="dropdownlist" ng-model="option">
+                <option value="iphone5" ng-selected="iphone5">Iphone5-40000</option>
+                <option value="iphonex" ng-selected="iphonex">IphoneX-60000</option>
+                <option value="hp" ng-selected="hp">HPLaptop-30000</option>
+                <option value="dell" ng-selected="dell">Dell Laptop-50000</option>
+            </select>
+            <input type="number" id="quantity" ng-model="quantity">
+            <input type="button" id="addbutton" value="Add" ng-click="AddToCart()" class="btn btn-primary visible-lg"
+                ng-hide="isadd">
+            <br>
+            <br>
+            <p ng-hide="isfilled">Please fill details</p>
+        </div>
+        <div>
+            <table class="table table-bordered" id="table">
+                <thead>
+                    <tr>
+                        <th>Id </th>
+                        <th>Model </th>
+                        <th>Cost </th>
+                        <th>Quantity</th>
+                        <th>Total Cost</th>
+                    </tr>
+                    <tr ng-repeat='item in result'>
+                        <td>{{item.id}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.cost}}</td>
+                        <td>{{item.quantity}}</td>
+                        <td>{{item.totalcost}}</td>
+                        <td> <button class='btn btn-danger' ng-click="deleteRow($index)">Delete</button> </td>
+
+                    </tr>
+
+                </thead>
+
+            </table>
+        </div>
+        <div>
+            <button class='btn btn-danger' ng-click="CalculateTotalCost()">caluclate Total Cost</button>
+            <br>
+            <br>
+            <p ng-model="totalcartcost" ng-hide="isshow">Total Cart Cost: {{totalcartcost}}</p>
+
+        </div>
+
+    </div>
+</body>
+<script src="angular.js"></script>
+<script>
+
+    var app = angular.module('shoppingcart-app', [])
+    app.factory('cartservices', ['$log', '$q', '$rootScope', function ($log, $q, $rootScope) {
+        object = {}
+        cart = [];
+
+        object.addcartdetails = function (data) {
+            var flag = 0;
+            for (var i = 0; i < cart.length; i++) {
+                if (cart[i].name == data.name) {
+                    cart[i].quantity = parseInt(cart[i].quantity) + parseInt(data.quantity);
+                    cart[i].totalcost = parseInt(cart[i].quantity) * parseInt(data.cost);
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0) {
+                cart.push(data)
+
+            }
+
+
+
+            return cart;
+
+        }
+        object.costofcart = function () {
+            return cart;
+        }
+        return object
+    }])
+    app.controller('cartController', ['$scope', '$rootScope', 'cartservices', function ($scope, $rootScope, cartservices) {
+        $scope.isshow = true;
+        $scope.isfilled=true;
+        var Products = [{
+            'id': '1',
+            'modelname': 'iphone5',
+            'price': 40000,
+            'quantity': 0
+
+        },
+        {
+            'id': '2',
+            'modelname': 'iphonex',
+            'price': 60000,
+            'quantity': 0
+        },
+        {
+            'id': '3',
+            'modelname': 'hp',
+            'price': 30000,
+            'quantity': 0
+        },
+        {
+            'id': '4',
+            'modelname': 'dell',
+            'price': 50000,
+            'quantity': 0
+        }]
+        $scope.result = [];
+        $scope.AddToCart = function () {
+            console.log($scope.option);
+            console.log($scope.quantity);
+            var quantity = $scope.quantity;
+            if (quantity == null ||$scope.option==null) {
+               
+               $scope.isfilled=false;
+            }
+            else 
+            {
+                $scope.isfilled=true;
+                for (var i = 0; i < Products.length; i++) {
+                    if ($scope.option == Products[i].modelname) {
+                        $scope.id = Products[i].id;
+                        $scope.name = Products[i].modelname;
+                        $scope.cost = Products[i].price;
+                        $scope.quantity = quantity;
+                        $scope.totalcost = $scope.quantity * $scope.cost;
+
+                    }
+                    var item =
+                        ({
+
+                            id: $scope.id,
+                            name: $scope.name,
+                            cost: $scope.cost,
+                            quantity: $scope.quantity,
+                            totalcost: $scope.totalcost
+                        });
+                    $scope.result = cartservices.addcartdetails(item)
+                    console.log($scope.cart);
+
+                }
+
+
+
+            }
+
+
+
+        }
+        $scope.deleteRow = function (i) {
+            $scope.result.splice(i, 1);
+        };
+
+        $scope.CalculateTotalCost = function () {
+            $scope.isshow = false;
+            $scope.cartcost = cartservices.costofcart();
+            var sum = 0;
+            for (i = 0; i < $scope.cartcost.length; i++) {
+                sum = sum + parseInt($scope.cartcost[i].totalcost);
+            }
+            $scope.totalcartcost = sum;
+
+
+        }
+
+
+    }])
+
+</script>
+
+</html>
