@@ -37,6 +37,7 @@ namespace InterfaceApp
 
             Console.WriteLine("Race Starts");
           
+
            foreach(IMovable movable in imove)
             {
                 movable.Move();

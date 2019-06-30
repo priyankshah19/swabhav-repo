@@ -13,6 +13,8 @@ namespace InterfacePloymorphism
             DoDBOperation(new DepartmentDB());
                          Console.WriteLine("");
             DoDBOperation(new CustomerDB());
+            Console.ReadLine();
+
         }
         public static void DoDBOperation(ICredable cread)
         {

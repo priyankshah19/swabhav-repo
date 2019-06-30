@@ -1,5 +1,0 @@
-D:\Swabhav rep\OPP\C#\TicTacToe\TicTacToeCopylib\bin\Debug\TicTacToeCopylib.dll
-D:\Swabhav rep\OPP\C#\TicTacToe\TicTacToeCopylib\bin\Debug\TicTacToeCopylib.pdb
-D:\Swabhav rep\OPP\C#\TicTacToe\TicTacToeCopylib\obj\Debug\TicTacToellib.csprojResolveAssemblyReference.cache
-D:\Swabhav rep\OPP\C#\TicTacToe\TicTacToeCopylib\obj\Debug\TicTacToeCopylib.dll
-D:\Swabhav rep\OPP\C#\TicTacToe\TicTacToeCopylib\obj\Debug\TicTacToeCopylib.pdb

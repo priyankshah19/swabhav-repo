@@ -6,7 +6,7 @@ namespace InheritanceWithConstructor.Case1
 {
     class Child : Parent
     {
-        public Child():base()
+        public Child()
         {
             Console.WriteLine("Child");
         }
